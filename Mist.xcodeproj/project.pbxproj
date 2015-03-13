@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		EB0A19EA1AB2529A00942545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A19E91AB2529A00942545 /* AppDelegate.swift */; };
-		EB0A19EC1AB2529A00942545 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A19EB1AB2529A00942545 /* ViewController.swift */; };
 		EB0A19EF1AB2529A00942545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0A19ED1AB2529A00942545 /* Main.storyboard */; };
 		EB0A19F11AB2529A00942545 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0A19F01AB2529A00942545 /* Images.xcassets */; };
 		EB0A19F41AB2529A00942545 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0A19F21AB2529A00942545 /* LaunchScreen.xib */; };
 		EB0A1A001AB2529A00942545 /* MistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A19FF1AB2529A00942545 /* MistTests.swift */; };
+		EBBB75F91AB26D9700BA502A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		EB0A19E41AB2529A00942545 /* Mist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0A19E81AB2529A00942545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB0A19E91AB2529A00942545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB0A19EB1AB2529A00942545 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB0A19EE1AB2529A00942545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB0A19F01AB2529A00942545 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EB0A19F31AB2529A00942545 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EB0A19F91AB2529A00942545 /* MistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0A19FE1AB2529A00942545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB0A19FF1AB2529A00942545 /* MistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MistTests.swift; sourceTree = "<group>"; };
+		EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +77,8 @@
 		EB0A19E61AB2529A00942545 /* Mist */ = {
 			isa = PBXGroup;
 			children = (
+				EBBB75F71AB265F700BA502A /* View Controllers */,
 				EB0A19E91AB2529A00942545 /* AppDelegate.swift */,
-				EB0A19EB1AB2529A00942545 /* ViewController.swift */,
 				EB0A19ED1AB2529A00942545 /* Main.storyboard */,
 				EB0A19F01AB2529A00942545 /* Images.xcassets */,
 				EB0A19F21AB2529A00942545 /* LaunchScreen.xib */,
@@ -110,6 +110,14 @@
 				EB0A19FE1AB2529A00942545 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBBB75F71AB265F700BA502A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +169,7 @@
 				TargetAttributes = {
 					EB0A19E31AB2529A00942545 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = JDJKS788L2;
 					};
 					EB0A19F81AB2529A00942545 = {
 						CreatedOnToolsVersion = 6.2;
@@ -212,8 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB0A19EC1AB2529A00942545 /* ViewController.swift in Sources */,
 				EB0A19EA1AB2529A00942545 /* AppDelegate.swift in Sources */,
+				EBBB75F91AB26D9700BA502A /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Mist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -346,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Mist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -405,6 +416,7 @@
 				EB0A1A051AB2529A00942545 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB0A1A061AB2529A00942545 /* Build configuration list for PBXNativeTarget "MistTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +425,7 @@
 				EB0A1A081AB2529A00942545 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
