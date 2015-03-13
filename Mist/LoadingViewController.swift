@@ -26,8 +26,6 @@ class LoadingViewController: UIViewController {
         
         imageTimer = NSTimer.scheduledTimerWithTimeInterval(0.035, target: self, selector: "updateLoader", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(imageTimer, forMode: NSRunLoopCommonModes)
-        
-        println(Keys.openWeatherKey())
     }
     
     func updateLoader() {
@@ -39,7 +37,10 @@ class LoadingViewController: UIViewController {
         
         if currentImage == 150 {
             currentImage = 0
-            canSegue = true
+            
+            imageTimer.invalidate()
+//            canSegue = true
+            self.performSegueWithIdentifier("mainSegue", sender: self)
         }
     }
 }

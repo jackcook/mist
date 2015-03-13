@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3260DB42184DDA655C74CEDB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFADB52BF78BB2FDD577A4F /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EB0A10F71AB38944007DB64C /* Places.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A10F61AB38944007DB64C /* Places.swift */; };
 		EB0A19EA1AB2529A00942545 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A19E91AB2529A00942545 /* AppDelegate.swift */; };
 		EB0A19EF1AB2529A00942545 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB0A19ED1AB2529A00942545 /* Main.storyboard */; };
 		EB0A19F11AB2529A00942545 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0A19F01AB2529A00942545 /* Images.xcassets */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		791F3BB645B9BE6865C64C1F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EAD4941F7C174F31A3EC7747 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EB0A10F61AB38944007DB64C /* Places.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Places.swift; sourceTree = "<group>"; };
 		EB0A19E41AB2529A00942545 /* Mist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0A19E81AB2529A00942545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB0A19E91AB2529A00942545 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				EB91A4671AB28AC8004232C0 /* Keys.swift */,
+				EB0A10F61AB38944007DB64C /* Places.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				EB91A4681AB28AC8004232C0 /* Keys.swift in Sources */,
 				EB0A19EA1AB2529A00942545 /* AppDelegate.swift in Sources */,
 				EBBB75F91AB26D9700BA502A /* LoadingViewController.swift in Sources */,
+				EB0A10F71AB38944007DB64C /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
