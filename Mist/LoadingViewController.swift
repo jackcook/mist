@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Jack Cook. All rights reserved.
 //
 
+import StackBluriOS
 import UIKit
 
 class LoadingViewController: UIViewController {
@@ -19,7 +20,8 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let background = UIImage(named: "Background-01")
+        let backgroundImage = UIImage(named: "Background-01")?.stackBlur(85)
+        background.image = backgroundImage
         
         imageTimer = NSTimer.scheduledTimerWithTimeInterval(0.035, target: self, selector: "updateLoader", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(imageTimer, forMode: NSRunLoopCommonModes)
@@ -31,5 +33,9 @@ class LoadingViewController: UIViewController {
         imageView.image = image
         
         currentImage += 1
+        
+        if currentImage == 151 {
+            currentImage = 0
+        }
     }
 }

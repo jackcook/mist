@@ -16,20 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R8A-az-q0B">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L8R-NZ-AzS">
-                                <rect key="frame" x="220" y="220" width="160" height="160"/>
+                                <rect key="frame" x="220" y="190" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="Ajf-Su-X0D"/>
                                     <constraint firstAttribute="height" constant="160" id="cTS-D6-RNe"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R8A-az-q0B">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="L8R-NZ-AzS" secondAttribute="centerX" id="1aw-7H-AgD"/>
-                            <constraint firstAttribute="centerY" secondItem="L8R-NZ-AzS" secondAttribute="centerY" id="2Lq-9i-vCx"/>
+                            <constraint firstAttribute="centerY" secondItem="L8R-NZ-AzS" secondAttribute="centerY" constant="30" id="2Lq-9i-vCx"/>
                             <constraint firstItem="R8A-az-q0B" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="KfW-zu-pW6"/>
                             <constraint firstItem="R8A-az-q0B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="V8H-Gl-5e7"/>
                             <constraint firstAttribute="trailing" secondItem="R8A-az-q0B" secondAttribute="trailing" id="YIy-oG-req"/>
