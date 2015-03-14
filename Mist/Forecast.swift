@@ -24,7 +24,7 @@ class ForecastAPI: NSObject {
     }
     
     class func getCurrentConditions(coordinate: CLLocationCoordinate2D, completion: (forecast: ForecastAPI, error: NSError?) -> Void) {
-        let url = "https://api.forecast.io/forecast/\(Keys.forecastKey())/\(coordinate.latitude),\(coordinate.longitude)"
+        let url = "https://api.forecast.io/forecast/\(Keys.forecastKey())/\(coordinate.latitude),\(coordinate.longitude)?units=si"
         request(.GET, url).response { (_, _, data, error) -> Void in
             let forecast = ForecastAPI(data: data as NSData)
             completion(forecast: forecast, error: error)
@@ -139,6 +139,7 @@ class Conditions: NSObject {
         self.precipIntensity = json["precipIntensity"]?.integerValue
         self.precipProbability = json["precipProbability"]?.integerValue
         
+//        println(json["summary"])
         self.summary = json["summary"]?.stringValue
         self.icon = json["icon"]?.stringValue
         self.dewPoint = json["dewPoint"]?.floatValue

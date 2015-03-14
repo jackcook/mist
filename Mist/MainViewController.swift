@@ -15,15 +15,15 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Places.autocomplete("new j", completion: { (data, error) -> Void in
+        Places.autocomplete("guel", completion: { (data, error) -> Void in
             let json = JSON(data: data)
             for prediction in json["predictions"].array! {
-//                println(prediction["description"])
+                println(prediction["description"])
             }
         })
         
-        ForecastAPI.getCurrentConditions("kabul", completion: { (forecast, error) -> Void in
-            println(forecast.daily.forecast[0].temperatureMax)
+        ForecastAPI.getCurrentConditions("guelph", completion: { (forecast, error) -> Void in
+            println(forecast.current.nearestStormDistance)
         })
     }
 }
