@@ -102,8 +102,44 @@
                     <view key="view" contentMode="scaleToFill" id="uUe-8F-jbs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5tQ-BF-xMD">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5tQ-BF-xMD" firstAttribute="top" secondItem="5ZV-3M-xlm" secondAttribute="bottom" id="AzO-Lq-cg9"/>
+                            <constraint firstAttribute="trailing" secondItem="5tQ-BF-xMD" secondAttribute="trailing" id="Km5-f4-c6g"/>
+                            <constraint firstItem="fee-v0-TAY" firstAttribute="top" secondItem="5tQ-BF-xMD" secondAttribute="bottom" id="oeV-Zj-G6w"/>
+                            <constraint firstItem="5tQ-BF-xMD" firstAttribute="leading" secondItem="uUe-8F-jbs" secondAttribute="leading" id="r3b-Wz-1iu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="5tQ-BF-xMD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="AzO-Lq-cg9"/>
+                                <exclude reference="Km5-f4-c6g"/>
+                                <exclude reference="r3b-Wz-1iu"/>
+                                <exclude reference="oeV-Zj-G6w"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="5tQ-BF-xMD"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="AzO-Lq-cg9"/>
+                                <include reference="Km5-f4-c6g"/>
+                                <include reference="r3b-Wz-1iu"/>
+                                <include reference="oeV-Zj-G6w"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="5tQ-BF-xMD" id="fyR-VI-8Ot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Hb-dL-tLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

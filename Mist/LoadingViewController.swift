@@ -25,7 +25,7 @@ class LoadingViewController: UIViewController {
         let backgroundImage = UIImage(named: "Background-01")?.stackBlur(85)
         background.image = backgroundImage
         
-        imageTimer = NSTimer.scheduledTimerWithTimeInterval(0.035, target: self, selector: "updateLoader", userInfo: nil, repeats: true)
+        imageTimer = NSTimer.scheduledTimerWithTimeInterval(0.025, target: self, selector: "updateLoader", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(imageTimer, forMode: NSRunLoopCommonModes)
     }
     

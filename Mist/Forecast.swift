@@ -24,7 +24,8 @@ class ForecastAPI: NSObject {
     }
     
     class func getCurrentConditions(coordinate: CLLocationCoordinate2D, completion: (forecast: ForecastAPI, error: NSError?) -> Void) {
-        let url = "https://api.forecast.io/forecast/\(Keys.forecastKey())/\(coordinate.latitude),\(coordinate.longitude)?units=si"
+        let url = "https://api.forecast.io/forecast/\(Keys.forecastKey())/\(coordinate.latitude),\(coordinate.longitude)?units=us&extend=hourly"
+        println(url)
         request(.GET, url).response { (_, _, data, error) -> Void in
             let forecast = ForecastAPI(data: data as NSData)
             completion(forecast: forecast, error: error)

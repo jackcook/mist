@@ -10,6 +10,10 @@ import Foundation
 
 class Keys {
     
+    class func flickrKey() -> String {
+        return Keys.getKey("Flickr")
+    }
+    
     class func forecastKey() -> String {
         return Keys.getKey("Forecast")
     }
