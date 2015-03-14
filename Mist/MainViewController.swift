@@ -18,10 +18,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet var bottomView: UIView!
     
+    var forecast: ForecastAPI!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = bottomView.backgroundColor
         
@@ -32,8 +33,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         })
         
-        ForecastAPI.getCurrentConditions("Big Sky, MT", completion: { (forecast, error) -> Void in
-//            println(forecast.current.temperature)
+        ForecastAPI.getCurrentConditions("new york", completion: { (forecast, error) -> Void in
+            self.forecast = forecast
+            
+            self.tableView.dataSource = self
+            self.tableView.reloadData()
         })
         
 //        newPhoto()
@@ -48,11 +52,36 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return forecast.hourly.forecast.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ForecastCell", forIndexPath: indexPath) as UITableViewCell
+        
+        let hour = forecast.hourly.forecast[indexPath.row]
+        
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "hh"
+        
+        let hourLabel = cell.contentView.viewWithTag(10) as UILabel
+        hourLabel.text = formatter.stringFromDate(hour.time)
+        
+        formatter.dateFormat = "a"
+        
+        let ampmLabel = cell.contentView.viewWithTag(11) as UILabel
+        ampmLabel.text = formatter.stringFromDate(hour.time)
+        
+        let temperatureLabel = cell.contentView.viewWithTag(13) as UILabel
+        temperatureLabel.text = "\(Int(hour.temperature)) º"
+        
+        let summaryLabel = cell.contentView.viewWithTag(14) as UILabel
+        summaryLabel.text = hour.summary
+        
+        let windLabel = cell.contentView.viewWithTag(16) as UILabel
+        windLabel.text = "\(Int(hour.windSpeed)) mph"
+        
+        let precipitationLabel = cell.contentView.viewWithTag(18) as UILabel
+        precipitationLabel.text = "\(hour.precipProbability) %"
         
         return cell
     }
