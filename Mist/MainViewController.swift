@@ -22,9 +22,8 @@ class MainViewController: UIViewController {
             }
         })
         
-        Forecast.getCurrentConditions("kabul", completion: { (data, error) -> Void in
-            let json = JSON(data: data)
-            println(json)
+        ForecastAPI.getCurrentConditions("kabul", completion: { (forecast, error) -> Void in
+            println(forecast.daily.forecast[0].temperatureMax)
         })
     }
 }
