@@ -29,10 +29,14 @@ class MainViewController: UIViewController {
 //            println(forecast.current.temperature)
         })
         
-        Flickr.getPhoto("new york", lat: 40.7127, lon: 74.0059) { (photos) -> Void in
-            for photo in photos {
-                println(photo.imageURL())
-            }
+        newPhoto()
+        let timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "newPhoto", userInfo: nil, repeats: true)
+        NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+    }
+    
+    func newPhoto() {
+        Google.getImage(40.720032, lon: -73.988354) { (image) -> Void in
+            self.imageView.image = image
         }
     }
 }

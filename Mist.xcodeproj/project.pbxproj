@@ -19,7 +19,7 @@
 		EB91A46A1AB28B5C004232C0 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB91A4691AB28B5C004232C0 /* Keys.plist */; };
 		EBBB75F91AB26D9700BA502A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */; };
 		EBC67ED31AB4C2DA00D7EF4C /* Mozart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC67ED21AB4C2DA00D7EF4C /* Mozart.swift */; };
-		EBC67ED51AB4C8BC00D7EF4C /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC67ED41AB4C8BC00D7EF4C /* Flickr.swift */; };
+		EBC67ED71AB4D4A500D7EF4C /* Google.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC67ED61AB4D4A500D7EF4C /* Google.swift */; };
 		EBD11C001AB3A8FA0023E9DC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD11BFE1AB3A8FA0023E9DC /* Crashlytics.framework */; };
 		EBD11C011AB3A8FA0023E9DC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD11BFF1AB3A8FA0023E9DC /* Fabric.framework */; };
 		EBD11C031AB3AD550023E9DC /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD11C021AB3AD550023E9DC /* Forecast.swift */; };
@@ -53,7 +53,7 @@
 		EB91A4691AB28B5C004232C0 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		EBC67ED21AB4C2DA00D7EF4C /* Mozart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mozart.swift; sourceTree = "<group>"; };
-		EBC67ED41AB4C8BC00D7EF4C /* Flickr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
+		EBC67ED61AB4D4A500D7EF4C /* Google.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Google.swift; sourceTree = "<group>"; };
 		EBD11BFE1AB3A8FA0023E9DC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EBD11BFF1AB3A8FA0023E9DC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		EBD11C021AB3AD550023E9DC /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 				EB0A10F61AB38944007DB64C /* Places.swift */,
 				EBD11C021AB3AD550023E9DC /* Forecast.swift */,
 				EBC67ED21AB4C2DA00D7EF4C /* Mozart.swift */,
-				EBC67ED41AB4C8BC00D7EF4C /* Flickr.swift */,
+				EBC67ED61AB4D4A500D7EF4C /* Google.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -358,9 +358,9 @@
 			files = (
 				EB91A4651AB2894B004232C0 /* MainViewController.swift in Sources */,
 				EBC67ED31AB4C2DA00D7EF4C /* Mozart.swift in Sources */,
-				EBC67ED51AB4C8BC00D7EF4C /* Flickr.swift in Sources */,
 				EB91A4681AB28AC8004232C0 /* Keys.swift in Sources */,
 				EB0A19EA1AB2529A00942545 /* AppDelegate.swift in Sources */,
+				EBC67ED71AB4D4A500D7EF4C /* Google.swift in Sources */,
 				EBBB75F91AB26D9700BA502A /* LoadingViewController.swift in Sources */,
 				EBD11C031AB3AD550023E9DC /* Forecast.swift in Sources */,
 				EB0A10F71AB38944007DB64C /* Places.swift in Sources */,
