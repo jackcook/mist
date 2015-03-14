@@ -20,6 +20,7 @@
 		EBBB75F91AB26D9700BA502A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */; };
 		EBD11C001AB3A8FA0023E9DC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD11BFE1AB3A8FA0023E9DC /* Crashlytics.framework */; };
 		EBD11C011AB3A8FA0023E9DC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD11BFF1AB3A8FA0023E9DC /* Fabric.framework */; };
+		EBD11C031AB3AD550023E9DC /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD11C021AB3AD550023E9DC /* Forecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		EBD11BFE1AB3A8FA0023E9DC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EBD11BFF1AB3A8FA0023E9DC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		EBD11C021AB3AD550023E9DC /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		FEFADB52BF78BB2FDD577A4F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 			children = (
 				EB91A4671AB28AC8004232C0 /* Keys.swift */,
 				EB0A10F61AB38944007DB64C /* Places.swift */,
+				EBD11C021AB3AD550023E9DC /* Forecast.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				EB91A4681AB28AC8004232C0 /* Keys.swift in Sources */,
 				EB0A19EA1AB2529A00942545 /* AppDelegate.swift in Sources */,
 				EBBB75F91AB26D9700BA502A /* LoadingViewController.swift in Sources */,
+				EBD11C031AB3AD550023E9DC /* Forecast.swift in Sources */,
 				EB0A10F71AB38944007DB64C /* Places.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
