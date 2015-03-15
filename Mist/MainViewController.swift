@@ -23,6 +23,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var pageControlBackground: UIView!
     
     var forecast: ForecastAPI!
+    var photos = [Photo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +31,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
         tableView.backgroundColor = pageControlBackground.backgroundColor
         
-        Places.autocomplete("big sky", completion: { (data, error) -> Void in
+        Places.autocomplete("new york", completion: { (data, error) -> Void in
             let json = JSON(data: data)
             for prediction in json["predictions"].array! {
-//                println(prediction["description"])
+                println(prediction["description"])
             }
         })
         
-        ForecastAPI.getCurrentConditions("new york", completion: { (forecast, error) -> Void in
+        ForecastAPI.getCurrentConditions("New York, NY", completion: { (forecast, error) -> Void in
             self.forecast = forecast
             
             self.locationName.text = "New York".uppercaseString
@@ -48,16 +49,29 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             self.tableView.reloadData()
         })
         
-        newPhoto()
-        let timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "newPhoto", userInfo: nil, repeats: true)
-        NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+        Flickr.getPhoto("New York, NY") { (photos) -> Void in
+            self.photos = photos
+            println(self.photos.count)
+            
+            self.newPhoto()
+            let timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "newPhoto", userInfo: nil, repeats: true)
+            NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+        }
     }
     
+    var currentPhoto = 0
+    
     func newPhoto() {
-        Google.getImage(40.720032, lon: -73.988354) { (image) -> Void in
+        Mozart.load(photos[currentPhoto].imageURL()).completion { (image) -> Void in
+            self.imageView.image = image.stackBlur(10)
+        }
+        
+        currentPhoto += 1
+        
+        /*Google.getImage(40.720032, lon: -73.988354) { (image) -> Void in
             let img = image.stackBlur(25)
             self.imageView.image = img
-        }
+        }*/
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
