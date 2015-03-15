@@ -17,7 +17,12 @@ class LoadingViewController: UIViewController {
     
     var imageTimer: NSTimer!
     var currentImage = 0
-    var canSegue = false
+    var animationFinished = false
+    var finishedRequests = 0
+    
+    var forecast: ForecastAPI!
+    var photos: [Photo]!
+    var firstImage: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +30,40 @@ class LoadingViewController: UIViewController {
         let backgroundImage = UIImage(named: "Background-01")?.stackBlur(85)
         background.image = backgroundImage
         
+        loadForecast()
+        loadImages()
+        
         imageTimer = NSTimer.scheduledTimerWithTimeInterval(0.025, target: self, selector: "updateLoader", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(imageTimer, forMode: NSRunLoopCommonModes)
+    }
+    
+    func loadForecast() {
+        ForecastAPI.getCurrentConditions("New York, NY", completion: { (forecast, error) -> Void in
+            self.forecast = forecast
+            self.finishedRequests += 1
+            self.finish()
+        })
+    }
+    
+    func loadImages() {
+        Flickr.getPhoto("New York, NY") { (photos) -> Void in
+            self.photos = photos
+            self.finishedRequests += 1
+            self.finish()
+            
+            Mozart.load(self.photos[0].imageURL()).completion { (image) -> Void in
+                self.firstImage = image.stackBlur(10)
+                self.finishedRequests += 1
+                self.finish()
+            }
+        }
+    }
+    
+    func finish() {
+        if (finishedRequests == 3) && animationFinished {
+            self.performSegueWithIdentifier("mainSegue", sender: self)
+            imageTimer.invalidate()
+        }
     }
     
     func updateLoader() {
@@ -38,10 +75,17 @@ class LoadingViewController: UIViewController {
         
         if currentImage == 150 {
             currentImage = 0
-            
-            imageTimer.invalidate()
-//            canSegue = true
-            self.performSegueWithIdentifier("mainSegue", sender: self)
+            animationFinished = true
+            finish()
         }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let mvc = segue.destinationViewController as MainViewController
+        mvc.loadData(forecast, photos: photos, firstImage: firstImage)
+    }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
     }
 }

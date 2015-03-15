@@ -45,10 +45,6 @@ class LoadingClass {
         self.url = url
         
         getImage() { (img) -> Void in
-            if let cb = self.completionBlock {
-                self.completionBlock(img)
-            }
-            
             switch self.holderType {
             case .ImageView:
                 self.imageView.image = img

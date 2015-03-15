@@ -23,43 +23,34 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var pageControlBackground: UIView!
     
     var forecast: ForecastAPI!
-    var photos = [Photo]()
+    var photos: [Photo]!
+    var firstImage: UIImage!
+    
+    var currentPhoto = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = pageControlBackground.backgroundColor
         
-        Places.autocomplete("new york", completion: { (data, error) -> Void in
+        /*Places.autocomplete("new york", completion: { (data, error) -> Void in
             let json = JSON(data: data)
             for prediction in json["predictions"].array! {
                 println(prediction["description"])
             }
-        })
+        })*/
         
-        ForecastAPI.getCurrentConditions("New York, NY", completion: { (forecast, error) -> Void in
-            self.forecast = forecast
-            
-            self.locationName.text = "New York".uppercaseString
-            self.temperatureLabel.text = "\(Int(forecast.current.temperature))º"
-            self.descriptionLabel.text = forecast.current.summary
-            
-            self.tableView.dataSource = self
-            self.tableView.reloadData()
-        })
-        
-        Flickr.getPhoto("New York, NY") { (photos) -> Void in
-            self.photos = photos
-            println(self.photos.count)
-            
-            self.newPhoto()
-            let timer = NSTimer.scheduledTimerWithTimeInterval(5, target: self, selector: "newPhoto", userInfo: nil, repeats: true)
-            NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
-        }
+        self.imageView.image = firstImage
+        let timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "newPhoto", userInfo: nil, repeats: true)
     }
     
-    var currentPhoto = 0
+    func loadData(forecast: ForecastAPI, photos: [Photo], firstImage: UIImage) {
+        self.forecast = forecast
+        self.photos = photos
+        self.firstImage = firstImage
+    }
     
     func newPhoto() {
         Mozart.load(photos[currentPhoto].imageURL()).completion { (image) -> Void in
@@ -67,11 +58,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         currentPhoto += 1
-        
-        /*Google.getImage(40.720032, lon: -73.988354) { (image) -> Void in
-            let img = image.stackBlur(25)
-            self.imageView.image = img
-        }*/
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
