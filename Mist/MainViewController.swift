@@ -14,9 +14,13 @@ import UIKit
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var locationName: UILabel!
+    @IBOutlet var unitButton: UIButton!
+    @IBOutlet var weatherIcon: UIImageView!
+    @IBOutlet var temperatureLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var tableView: UITableView!
-    
-    @IBOutlet var bottomView: UIView!
+    @IBOutlet var pageControlBackground: UIView!
     
     var forecast: ForecastAPI!
     
@@ -24,7 +28,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
         tableView.delegate = self
-        tableView.backgroundColor = bottomView.backgroundColor
+        tableView.backgroundColor = pageControlBackground.backgroundColor
         
         Places.autocomplete("big sky", completion: { (data, error) -> Void in
             let json = JSON(data: data)
@@ -35,6 +39,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         ForecastAPI.getCurrentConditions("new york", completion: { (forecast, error) -> Void in
             self.forecast = forecast
+            
+            self.locationName.text = "New York".uppercaseString
+            self.temperatureLabel.text = "\(Int(forecast.current.temperature))º"
+            self.descriptionLabel.text = forecast.current.summary
             
             self.tableView.dataSource = self
             self.tableView.reloadData()

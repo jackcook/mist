@@ -726,9 +726,14 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="bottomView" destination="rP5-eS-BlF" id="8iv-kN-idR"/>
+                        <outlet property="descriptionLabel" destination="TcZ-1c-HDP" id="wFx-A5-4Km"/>
                         <outlet property="imageView" destination="8aM-40-fQl" id="klV-Gf-546"/>
+                        <outlet property="locationName" destination="qcm-TT-qZE" id="ma2-7x-F9P"/>
+                        <outlet property="pageControlBackground" destination="rP5-eS-BlF" id="R0d-Iz-bJ6"/>
                         <outlet property="tableView" destination="7HD-KV-EEF" id="e1T-pl-jqC"/>
+                        <outlet property="temperatureLabel" destination="nM1-Vr-EpZ" id="vwm-4a-IpR"/>
+                        <outlet property="unitButton" destination="Tq3-VI-OJC" id="tiS-t4-Bja"/>
+                        <outlet property="weatherIcon" destination="8LG-75-Gpp" id="1T9-SL-WMn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Hb-dL-tLA" userLabel="First Responder" sceneMemberID="firstResponder"/>
