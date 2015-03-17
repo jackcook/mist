@@ -18,6 +18,13 @@
 		EB91A4681AB28AC8004232C0 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91A4671AB28AC8004232C0 /* Keys.swift */; };
 		EB91A46A1AB28B5C004232C0 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB91A4691AB28B5C004232C0 /* Keys.plist */; };
 		EB97D0111AB51B1D0070768F /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB97D0101AB51B1D0070768F /* Flickr.swift */; };
+		EBB3CD471AB8C0F900CD74EA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3CD461AB8C0F900CD74EA /* InterfaceController.swift */; };
+		EBB3CD491AB8C0F900CD74EA /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3CD481AB8C0F900CD74EA /* GlanceController.swift */; };
+		EBB3CD4B1AB8C0F900CD74EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB3CD4A1AB8C0F900CD74EA /* Images.xcassets */; };
+		EBB3CD4F1AB8C0F900CD74EA /* Mist WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = EBB3CD4E1AB8C0F900CD74EA /* Mist WatchKit App.app */; };
+		EBB3CD571AB8C0F900CD74EA /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB3CD551AB8C0F900CD74EA /* Interface.storyboard */; };
+		EBB3CD591AB8C0F900CD74EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB3CD581AB8C0F900CD74EA /* Images.xcassets */; };
+		EBB3CD5C1AB8C0F900CD74EA /* Mist WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EBB3CD421AB8C0F900CD74EA /* Mist WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EBBB75F91AB26D9700BA502A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */; };
 		EBC67ED31AB4C2DA00D7EF4C /* Mozart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC67ED21AB4C2DA00D7EF4C /* Mozart.swift */; };
 		EBD11C001AB3A8FA0023E9DC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD11BFE1AB3A8FA0023E9DC /* Crashlytics.framework */; };
@@ -33,7 +40,35 @@
 			remoteGlobalIDString = EB0A19E31AB2529A00942545;
 			remoteInfo = Mist;
 		};
+		EBB3CD501AB8C0F900CD74EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB0A19DC1AB2529A00942545 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB3CD4D1AB8C0F900CD74EA;
+			remoteInfo = "Mist WatchKit App";
+		};
+		EBB3CD5A1AB8C0F900CD74EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB0A19DC1AB2529A00942545 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBB3CD411AB8C0F900CD74EA;
+			remoteInfo = "Mist WatchKit Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EBB3CD631AB8C0F900CD74EA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EBB3CD5C1AB8C0F900CD74EA /* Mist WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		791F3BB645B9BE6865C64C1F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -52,6 +87,15 @@
 		EB91A4671AB28AC8004232C0 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EB91A4691AB28B5C004232C0 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 		EB97D0101AB51B1D0070768F /* Flickr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
+		EBB3CD421AB8C0F900CD74EA /* Mist WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mist WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB3CD451AB8C0F900CD74EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB3CD461AB8C0F900CD74EA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EBB3CD481AB8C0F900CD74EA /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		EBB3CD4A1AB8C0F900CD74EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EBB3CD4E1AB8C0F900CD74EA /* Mist WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mist WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB3CD541AB8C0F900CD74EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB3CD561AB8C0F900CD74EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		EBB3CD581AB8C0F900CD74EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		EBC67ED21AB4C2DA00D7EF4C /* Mozart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mozart.swift; sourceTree = "<group>"; };
 		EBD11BFE1AB3A8FA0023E9DC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
@@ -72,6 +116,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		EB0A19F61AB2529A00942545 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB3CD3F1AB8C0F900CD74EA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -101,6 +152,8 @@
 		EB0A19DB1AB2529A00942545 = {
 			isa = PBXGroup;
 			children = (
+				EBB3CD431AB8C0F900CD74EA /* Mist WatchKit Extension */,
+				EBB3CD521AB8C0F900CD74EA /* Mist WatchKit App */,
 				EBD11BFD1AB3A8ED0023E9DC /* Frameworks */,
 				EB0A19E61AB2529A00942545 /* Mist */,
 				EB0A19FC1AB2529A00942545 /* MistTests */,
@@ -115,6 +168,8 @@
 			children = (
 				EB0A19E41AB2529A00942545 /* Mist.app */,
 				EB0A19F91AB2529A00942545 /* MistTests.xctest */,
+				EBB3CD421AB8C0F900CD74EA /* Mist WatchKit Extension.appex */,
+				EBB3CD4E1AB8C0F900CD74EA /* Mist WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -171,6 +226,43 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		EBB3CD431AB8C0F900CD74EA /* Mist WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EBB3CD461AB8C0F900CD74EA /* InterfaceController.swift */,
+				EBB3CD481AB8C0F900CD74EA /* GlanceController.swift */,
+				EBB3CD4A1AB8C0F900CD74EA /* Images.xcassets */,
+				EBB3CD441AB8C0F900CD74EA /* Supporting Files */,
+			);
+			path = "Mist WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		EBB3CD441AB8C0F900CD74EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBB3CD451AB8C0F900CD74EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBB3CD521AB8C0F900CD74EA /* Mist WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				EBB3CD551AB8C0F900CD74EA /* Interface.storyboard */,
+				EBB3CD581AB8C0F900CD74EA /* Images.xcassets */,
+				EBB3CD531AB8C0F900CD74EA /* Supporting Files */,
+			);
+			path = "Mist WatchKit App";
+			sourceTree = "<group>";
+		};
+		EBB3CD531AB8C0F900CD74EA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EBB3CD541AB8C0F900CD74EA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		EBBB75F71AB265F700BA502A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,10 +295,12 @@
 				B04C11036BC666D9F2646E51 /* Embed Pods Frameworks */,
 				EC279A9C5F72065F98862124 /* Copy Pods Resources */,
 				EBD11BFC1AB3A8D10023E9DC /* ShellScript */,
+				EBB3CD631AB8C0F900CD74EA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				EBB3CD5B1AB8C0F900CD74EA /* PBXTargetDependency */,
 			);
 			name = Mist;
 			productName = Mist;
@@ -231,6 +325,39 @@
 			productReference = EB0A19F91AB2529A00942545 /* MistTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		EBB3CD411AB8C0F900CD74EA /* Mist WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB3CD621AB8C0F900CD74EA /* Build configuration list for PBXNativeTarget "Mist WatchKit Extension" */;
+			buildPhases = (
+				EBB3CD3E1AB8C0F900CD74EA /* Sources */,
+				EBB3CD3F1AB8C0F900CD74EA /* Frameworks */,
+				EBB3CD401AB8C0F900CD74EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBB3CD511AB8C0F900CD74EA /* PBXTargetDependency */,
+			);
+			name = "Mist WatchKit Extension";
+			productName = "Mist WatchKit Extension";
+			productReference = EBB3CD421AB8C0F900CD74EA /* Mist WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		EBB3CD4D1AB8C0F900CD74EA /* Mist WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB3CD611AB8C0F900CD74EA /* Build configuration list for PBXNativeTarget "Mist WatchKit App" */;
+			buildPhases = (
+				EBB3CD4C1AB8C0F900CD74EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mist WatchKit App";
+			productName = "Mist WatchKit App";
+			productReference = EBB3CD4E1AB8C0F900CD74EA /* Mist WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -247,6 +374,13 @@
 					EB0A19F81AB2529A00942545 = {
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = EB0A19E31AB2529A00942545;
+					};
+					EBB3CD411AB8C0F900CD74EA = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = JDJKS788L2;
+					};
+					EBB3CD4D1AB8C0F900CD74EA = {
+						CreatedOnToolsVersion = 6.2;
 					};
 				};
 			};
@@ -265,6 +399,8 @@
 			targets = (
 				EB0A19E31AB2529A00942545 /* Mist */,
 				EB0A19F81AB2529A00942545 /* MistTests */,
+				EBB3CD411AB8C0F900CD74EA /* Mist WatchKit Extension */,
+				EBB3CD4D1AB8C0F900CD74EA /* Mist WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -285,6 +421,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB3CD401AB8C0F900CD74EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB3CD4B1AB8C0F900CD74EA /* Images.xcassets in Resources */,
+				EBB3CD4F1AB8C0F900CD74EA /* Mist WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBB3CD4C1AB8C0F900CD74EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB3CD571AB8C0F900CD74EA /* Interface.storyboard in Resources */,
+				EBB3CD591AB8C0F900CD74EA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +529,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBB3CD3E1AB8C0F900CD74EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBB3CD471AB8C0F900CD74EA /* InterfaceController.swift in Sources */,
+				EBB3CD491AB8C0F900CD74EA /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -382,6 +545,16 @@
 			isa = PBXTargetDependency;
 			target = EB0A19E31AB2529A00942545 /* Mist */;
 			targetProxy = EB0A19FA1AB2529A00942545 /* PBXContainerItemProxy */;
+		};
+		EBB3CD511AB8C0F900CD74EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB3CD4D1AB8C0F900CD74EA /* Mist WatchKit App */;
+			targetProxy = EBB3CD501AB8C0F900CD74EA /* PBXContainerItemProxy */;
+		};
+		EBB3CD5B1AB8C0F900CD74EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBB3CD411AB8C0F900CD74EA /* Mist WatchKit Extension */;
+			targetProxy = EBB3CD5A1AB8C0F900CD74EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -400,6 +573,14 @@
 				EB0A19F31AB2529A00942545 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		EBB3CD551AB8C0F900CD74EA /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBB3CD561AB8C0F900CD74EA /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -488,6 +669,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -504,6 +686,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -548,6 +731,62 @@
 			};
 			name = Release;
 		};
+		EBB3CD5D1AB8C0F900CD74EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Mist WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EBB3CD5E1AB8C0F900CD74EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Mist WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EBB3CD5F1AB8C0F900CD74EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = Mist_WatchKit_Extension;
+				INFOPLIST_FILE = "Mist WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		EBB3CD601AB8C0F900CD74EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = Mist_WatchKit_Extension;
+				INFOPLIST_FILE = "Mist WatchKit App/Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,6 +816,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EBB3CD611AB8C0F900CD74EA /* Build configuration list for PBXNativeTarget "Mist WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB3CD5F1AB8C0F900CD74EA /* Debug */,
+				EBB3CD601AB8C0F900CD74EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EBB3CD621AB8C0F900CD74EA /* Build configuration list for PBXNativeTarget "Mist WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBB3CD5D1AB8C0F900CD74EA /* Debug */,
+				EBB3CD5E1AB8C0F900CD74EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
