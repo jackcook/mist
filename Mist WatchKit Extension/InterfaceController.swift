@@ -9,13 +9,14 @@
 import WatchKit
 import Foundation
 
-
 class InterfaceController: WKInterfaceController {
-
+    
+    @IBOutlet var weatherImage: WKInterfaceImage!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+        weatherImage.setImageNamed("Snow")
     }
 
     override func willActivate() {
@@ -27,5 +28,4 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
 }

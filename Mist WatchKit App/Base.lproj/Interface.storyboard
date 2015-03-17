@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="14A389" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3734"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Mist_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="NEW YORK" id="Qq7-0o-db0">
+                            <fontDescription key="font" type="system" pointSize="18"/>
+                        </label>
+                        <group width="1" alignment="left" id="RKr-dm-sjI">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="29º" id="NIY-4q-PNR">
+                                    <fontDescription key="font" type="system" pointSize="28"/>
+                                </label>
+                                <separator alignment="center" alpha="0.0" id="BCd-xE-CAV"/>
+                                <separator alignment="center" alpha="0.0" id="sFa-PV-DiQ"/>
+                                <separator alignment="center" alpha="0.0" id="g7H-As-kOe"/>
+                                <imageView width="52" height="35" alignment="center" image="Snow" id="uIh-KP-NPa"/>
+                            </items>
+                        </group>
+                        <label alignment="center" text="light snow" id="Yrh-yQ-G5E">
+                            <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                        </label>
+                        <button width="1" alignment="left" verticalAlignment="bottom" title="More Info" id="fLJ-EZ-mgU"/>
+                    </items>
+                    <connections>
+                        <outlet property="weatherImage" destination="uIh-KP-NPa" id="I2z-2p-0zG"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="164" y="217"/>
+            <point key="canvasLocation" x="-62" y="203"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
-                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModuleProvider="target">
+                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="Mist_WatchKit_App" customModuleProvider="target">
                     <items>
                         <group alignment="left" id="gv7-I2-MZq"/>
                         <group alignment="left" id="eew-Gs-W6Y"/>
@@ -23,7 +47,7 @@
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="164" y="514"/>
+            <point key="canvasLocation" x="-62" y="507"/>
         </scene>
     </scenes>
 </document>
