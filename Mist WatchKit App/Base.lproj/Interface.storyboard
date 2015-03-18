@@ -28,7 +28,7 @@
                                 <tableRow identifier="CreateRow" id="QVh-oc-7s5" customClass="CreateRow" customModule="Mist_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="9Xx-t3-iM9">
                                         <items>
-                                            <label alignment="center" verticalAlignment="center" text="+" id="9ey-xn-vwW">
+                                            <label height="31.5" alignment="center" text="+" id="9ey-xn-vwW">
                                                 <fontDescription key="font" type="system" pointSize="32"/>
                                             </label>
                                         </items>
