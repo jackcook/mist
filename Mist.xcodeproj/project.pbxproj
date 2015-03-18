@@ -16,6 +16,7 @@
 		EB0A1A001AB2529A00942545 /* MistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A19FF1AB2529A00942545 /* MistTests.swift */; };
 		EB32AA8F1ABA1433005ACD6C /* Weather.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB32AA8E1ABA1433005ACD6C /* Weather.plist */; };
 		EB32AA911ABA1699005ACD6C /* ErrorInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32AA901ABA1699005ACD6C /* ErrorInterfaceController.swift */; };
+		EB32AA931ABA1E46005ACD6C /* LoadingInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB32AA921ABA1E46005ACD6C /* LoadingInterfaceController.swift */; };
 		EB5BDD601AB9E9BF00A1DDFF /* VerifyInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5BDD5F1AB9E9BF00A1DDFF /* VerifyInterfaceController.swift */; };
 		EB5BDD621AB9F30C00A1DDFF /* VerifyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5BDD611AB9F30C00A1DDFF /* VerifyRow.swift */; };
 		EB91A4651AB2894B004232C0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91A4641AB2894B004232C0 /* MainViewController.swift */; };
@@ -94,6 +95,7 @@
 		EB0A19FF1AB2529A00942545 /* MistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MistTests.swift; sourceTree = "<group>"; };
 		EB32AA8E1ABA1433005ACD6C /* Weather.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Weather.plist; sourceTree = "<group>"; };
 		EB32AA901ABA1699005ACD6C /* ErrorInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorInterfaceController.swift; sourceTree = "<group>"; };
+		EB32AA921ABA1E46005ACD6C /* LoadingInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingInterfaceController.swift; sourceTree = "<group>"; };
 		EB5BDD5F1AB9E9BF00A1DDFF /* VerifyInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyInterfaceController.swift; sourceTree = "<group>"; };
 		EB5BDD611AB9F30C00A1DDFF /* VerifyRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyRow.swift; sourceTree = "<group>"; };
 		EB91A4641AB2894B004232C0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				EBB3CD461AB8C0F900CD74EA /* ForecastInterfaceController.swift */,
 				EB5BDD5F1AB9E9BF00A1DDFF /* VerifyInterfaceController.swift */,
 				EB32AA901ABA1699005ACD6C /* ErrorInterfaceController.swift */,
+				EB32AA921ABA1E46005ACD6C /* LoadingInterfaceController.swift */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				EBB3CD6B1AB8F5C400CD74EA /* LocationRow.swift in Sources */,
 				EB32AA911ABA1699005ACD6C /* ErrorInterfaceController.swift in Sources */,
 				EB5BDD621AB9F30C00A1DDFF /* VerifyRow.swift in Sources */,
+				EB32AA931ABA1E46005ACD6C /* LoadingInterfaceController.swift in Sources */,
 				EBC40E1E1AB9D53500FE9C7A /* CreateRow.swift in Sources */,
 				EBB3CD471AB8C0F900CD74EA /* ForecastInterfaceController.swift in Sources */,
 				EB5BDD601AB9E9BF00A1DDFF /* VerifyInterfaceController.swift in Sources */,

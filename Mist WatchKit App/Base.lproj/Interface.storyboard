@@ -44,12 +44,11 @@
             </objects>
             <point key="canvasLocation" x="-319" y="203"/>
         </scene>
-        <!--VerifyInterfaceController-->
+        <!--Which one?-->
         <scene sceneID="DBf-Ri-fvD">
             <objects>
-                <controller identifier="VerifyInterfaceController" id="zIQ-K9-fLb" customClass="VerifyInterfaceController" customModule="Mist_WatchKit_Extension">
+                <controller identifier="VerifyInterfaceController" title="Which one?" id="zIQ-K9-fLb" customClass="VerifyInterfaceController" customModule="Mist_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Which one?" id="owu-ZZ-EH2"/>
                         <table alignment="left" id="u5b-gI-h00">
                             <items>
                                 <tableRow identifier="VerifyRow" id="OXF-xV-gcp" customClass="VerifyRow" customModule="Mist_WatchKit_Extension">
@@ -70,7 +69,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-319" y="-63"/>
+            <point key="canvasLocation" x="258" y="515"/>
         </scene>
         <!--ErrorInterfaceController-->
         <scene sceneID="85p-BQ-3cm">
@@ -164,6 +163,13 @@
             </objects>
             <point key="canvasLocation" x="-52" y="202.75"/>
         </scene>
+        <!--LoadingInterfaceController-->
+        <scene sceneID="la9-hZ-ewG">
+            <objects>
+                <controller identifier="LoadingInterfaceController" id="G9Q-Fs-WgF" customClass="LoadingInterfaceController" customModule="Mist_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="-52" y="515"/>
+        </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
@@ -198,7 +204,7 @@
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
             </objects>
-            <point key="canvasLocation" x="-62" y="507"/>
+            <point key="canvasLocation" x="-319" y="515"/>
         </scene>
     </scenes>
 </document>

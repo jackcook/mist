@@ -28,7 +28,7 @@ class VerifyInterfaceController: WKInterfaceController {
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
         WKInterfaceController.openParentApplication(["load": results[rowIndex]], reply: { (data, error) -> Void in
-            self.dismissController()
+            self.popToRootController()
         })
     }
 }
