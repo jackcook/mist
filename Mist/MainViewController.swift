@@ -20,9 +20,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var temperatureLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var pageControlBackground: UIView!
     
-    var forecast: ForecastAPI!
+    var currentForecast = 0
+    var forecasts: [ForecastAPI]!
     var photos: [Photo]!
     var firstImage: UIImage!
     
@@ -31,12 +33,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
-        defaults?.setObject("hello", forKey: "test")
-        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = pageControlBackground.backgroundColor
+        
+        self.pageControl.numberOfPages = self.forecasts.count
         
         /*Places.autocomplete("new york", completion: { (data, error) -> Void in
             let json = JSON(data: data)
@@ -47,10 +48,39 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.imageView.image = firstImage
         let timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "newPhoto", userInfo: nil, repeats: true)
+        
+        let slgr = UISwipeGestureRecognizer(target: self, action: "swipeLeft")
+        slgr.direction = .Left
+        self.view.addGestureRecognizer(slgr)
+        
+        let srgr = UISwipeGestureRecognizer(target: self, action: "swipeRight")
+        srgr.direction = .Right
+        self.view.addGestureRecognizer(srgr)
     }
     
-    func loadData(forecast: ForecastAPI, photos: [Photo], firstImage: UIImage) {
-        self.forecast = forecast
+    func swipeLeft() {
+        changeLocation(true)
+    }
+    
+    func swipeRight() {
+        changeLocation(false)
+    }
+    
+    func changeLocation(next: Bool) {
+        if (next && currentForecast == forecasts.count - 1) || (!next && currentForecast == 0) {
+            return
+        }
+        
+        currentForecast += next ? 1 : -1
+        self.pageControl.currentPage = currentForecast
+        
+        let nextLocation = self.forecasts[currentForecast]
+        
+        self.locationName.text = nextLocation.current.summary
+    }
+    
+    func loadData(forecasts: [ForecastAPI], photos: [Photo], firstImage: UIImage) {
+        self.forecasts = forecasts
         self.photos = photos
         self.firstImage = firstImage
     }
@@ -64,13 +94,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return forecast.hourly.forecast.count
+        return forecasts[currentForecast].hourly.forecast.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ForecastCell", forIndexPath: indexPath) as UITableViewCell
         
-        let hour = forecast.hourly.forecast[indexPath.row]
+        let hour = forecasts[currentForecast].hourly.forecast[indexPath.row]
         
         let formatter = NSDateFormatter()
         formatter.dateFormat = "hh"

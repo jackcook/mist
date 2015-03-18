@@ -455,7 +455,7 @@
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="188" y="34.5" width="23" height="16"/>
+                                                        <rect key="frame" x="188" y="34" width="23" height="16"/>
                                                         <mask key="constraints">
                                                             <include reference="b28-BE-OXp"/>
                                                             <include reference="xgA-ma-mqa"/>
@@ -475,7 +475,7 @@
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="267" y="34.5" width="11" height="16"/>
+                                                        <rect key="frame" x="267" y="34" width="11" height="16"/>
                                                         <mask key="constraints">
                                                             <include reference="ta5-XR-EjX"/>
                                                             <include reference="tvz-4l-AzS"/>
@@ -488,7 +488,7 @@
                                                     <color key="textColor" red="0.44313725490196076" green="0.50196078431372548" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="256.5" y="58.5" width="31.5" height="19.5"/>
+                                                        <rect key="frame" x="256.5" y="58" width="31.5" height="19.5"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="16" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9 mph" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cf-nu-UtA">
@@ -497,7 +497,7 @@
                                                     <color key="textColor" red="0.4431372549" green="0.50196078430000002" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                                        <rect key="frame" x="179" y="58.5" width="41.5" height="19.5"/>
+                                                        <rect key="frame" x="179" y="58" width="41.5" height="19.5"/>
                                                     </variation>
                                                 </label>
                                             </subviews>
@@ -737,6 +737,7 @@
                         <outlet property="descriptionLabel" destination="TcZ-1c-HDP" id="wFx-A5-4Km"/>
                         <outlet property="imageView" destination="8aM-40-fQl" id="klV-Gf-546"/>
                         <outlet property="locationName" destination="qcm-TT-qZE" id="ma2-7x-F9P"/>
+                        <outlet property="pageControl" destination="7zL-F0-KVX" id="CMq-KH-Fkg"/>
                         <outlet property="pageControlBackground" destination="rP5-eS-BlF" id="R0d-Iz-bJ6"/>
                         <outlet property="tableView" destination="7HD-KV-EEF" id="e1T-pl-jqC"/>
                         <outlet property="temperatureLabel" destination="nM1-Vr-EpZ" id="vwm-4a-IpR"/>
