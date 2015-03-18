@@ -25,7 +25,7 @@
                                         <outlet property="locationName" destination="1Qt-L8-ghc" id="VWP-Vk-pXF"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="CreateRow" id="QVh-oc-7s5" customClass="CreateRow" customModule="Mist">
+                                <tableRow identifier="CreateRow" id="QVh-oc-7s5" customClass="CreateRow" customModule="Mist_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="9Xx-t3-iM9">
                                         <items>
                                             <label alignment="center" verticalAlignment="center" text="+" id="9ey-xn-vwW">
