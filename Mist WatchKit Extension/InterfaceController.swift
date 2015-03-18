@@ -11,26 +11,36 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
     
+    @IBOutlet var nameLabel: WKInterfaceLabel!
+    @IBOutlet var temperatureLabel: WKInterfaceLabel!
     @IBOutlet var weatherImage: WKInterfaceImage!
+    @IBOutlet var descriptionLabel: WKInterfaceLabel!
     @IBOutlet var tableView: WKInterfaceTable!
+    
+    var weatherData: [String: AnyObject]!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
-        
-        let locations = ["Hourly", "New York, NY", "San Francisco, CA", "Toronto, CA", "Chicago, IL", "Dallas, TX"]
         var rowTypes = [String]()
         
-        for location in locations {
-            if location == "Hourly" {
-                rowTypes.append("HeaderRow")
-            } else {
-                rowTypes.append("HourlyRow")
+        if let data = context as? [String: AnyObject] {
+            self.weatherData = data
+            
+            if let name = data["name"] as? String {
+                self.nameLabel.setText(name)
             }
         }
         
-//        tableView.setNumberOfRows(locations.count, withRowType: "HourlyRow")
+        rowTypes.append("HeaderRow")
+        
+        let hourlyData = self.weatherData["hourly"] as [String: AnyObject]
+        for (key, val) in hourlyData {
+            rowTypes.append("HourlyRow")
+        }
+        
+        rowTypes.append("HeaderRow")
+        
         tableView.setRowTypes(rowTypes)
         
         for i in 0...tableView.numberOfRows - 1 {
@@ -41,7 +51,9 @@ class InterfaceController: WKInterfaceController {
                 headerRow.headerLabel.setText("Hourly")
             } else {
                 let hourlyRow = row as HourlyRow
-                hourlyRow.timeLabel.setText("1 PM")
+                
+                let hour = hourlyData["hour"]!
+                hourlyRow.timeLabel.setText("\(hour)")
             }
 //            let name = locations[i]
 //            

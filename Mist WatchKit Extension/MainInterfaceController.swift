@@ -12,16 +12,23 @@ class MainInterfaceController: WKInterfaceController {
 
     @IBOutlet var tableView: WKInterfaceTable!
     
+    var weatherData: Array<Dictionary<String, AnyObject>>!
+    
     override func willActivate() {
-        let locations = ["New York, NY", "San Francisco, CA", "Toronto, CA", "Chicago, IL", "Dallas, TX"]
         let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
-        let weatherData = defaults?.objectForKey("WeatherData")
+        self.weatherData = defaults?.arrayForKey("WeatherData") as [[String: AnyObject]]
         
-        tableView.setNumberOfRows(locations.count, withRowType: "LocationRow")
+        tableView.setNumberOfRows(self.weatherData.count, withRowType: "LocationRow")
         
         for i in 0...tableView.numberOfRows - 1 {
             let row = tableView.rowControllerAtIndex(i) as LocationRow
-            row.locationName.setText(locations[i])
+            let data = self.weatherData[i]
+            let name = data["name"] as String
+            row.locationName.setText(name)
         }
+    }
+    
+    override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
+        return self.weatherData[rowIndex]
     }
 }

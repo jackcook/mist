@@ -100,7 +100,10 @@
                         </table>
                     </items>
                     <connections>
+                        <outlet property="descriptionLabel" destination="Yrh-yQ-G5E" id="GN9-62-Otd"/>
+                        <outlet property="nameLabel" destination="Qq7-0o-db0" id="bkq-4D-4P9"/>
                         <outlet property="tableView" destination="YTN-eh-enP" id="vuK-DB-wpd"/>
+                        <outlet property="temperatureLabel" destination="NIY-4q-PNR" id="zKE-hq-LRN"/>
                         <outlet property="weatherImage" destination="uIh-KP-NPa" id="I2z-2p-0zG"/>
                     </connections>
                 </controller>
