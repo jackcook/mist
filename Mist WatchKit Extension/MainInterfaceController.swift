@@ -43,9 +43,12 @@ class MainInterfaceController: WKInterfaceController {
     }
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        if rowIndex == table.numberOfRows {
+        if rowIndex == table.numberOfRows - 1 {
             self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: WKTextInputMode.Plain) { (results) -> Void in
-                println(results)
+                println("sending")
+                WKInterfaceController.openParentApplication(["results": results], reply: { (data, error) -> Void in
+                    self.presentControllerWithName("VerifyInterfaceController", context: data)
+                })
             }
         }
     }

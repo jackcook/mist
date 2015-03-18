@@ -44,6 +44,34 @@
             </objects>
             <point key="canvasLocation" x="-319" y="203"/>
         </scene>
+        <!--VerifyInterfaceController-->
+        <scene sceneID="DBf-Ri-fvD">
+            <objects>
+                <controller identifier="VerifyInterfaceController" id="zIQ-K9-fLb" customClass="VerifyInterfaceController" customModule="Mist_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Which one?" id="owu-ZZ-EH2"/>
+                        <table alignment="left" id="u5b-gI-h00">
+                            <items>
+                                <tableRow identifier="VerifyRow" id="OXF-xV-gcp" customClass="VerifyRow" customModule="Mist_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="hEx-iu-aml">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="New York, NY" id="UKi-BY-bS1"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="locationName" destination="UKi-BY-bS1" id="UeG-pB-LQE"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="tableView" destination="u5b-gI-h00" id="NBt-cc-317"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-319" y="-63"/>
+        </scene>
         <!--Forecast Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>

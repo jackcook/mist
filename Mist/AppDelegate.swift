@@ -19,4 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics()])
         return true
     }
+    
+    func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
+        let voiceResults = userInfo["results"] as [String]
+        Places.autocomplete(voiceResults[0], completion: { (results, error) -> Void in
+            println(results)
+            reply(["results": results])
+        })
+    }
 }

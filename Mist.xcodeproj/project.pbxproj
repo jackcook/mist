@@ -14,6 +14,8 @@
 		EB0A19F11AB2529A00942545 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0A19F01AB2529A00942545 /* Images.xcassets */; };
 		EB0A19F41AB2529A00942545 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB0A19F21AB2529A00942545 /* LaunchScreen.xib */; };
 		EB0A1A001AB2529A00942545 /* MistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB0A19FF1AB2529A00942545 /* MistTests.swift */; };
+		EB5BDD601AB9E9BF00A1DDFF /* VerifyInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5BDD5F1AB9E9BF00A1DDFF /* VerifyInterfaceController.swift */; };
+		EB5BDD621AB9F30C00A1DDFF /* VerifyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5BDD611AB9F30C00A1DDFF /* VerifyRow.swift */; };
 		EB91A4651AB2894B004232C0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91A4641AB2894B004232C0 /* MainViewController.swift */; };
 		EB91A4681AB28AC8004232C0 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91A4671AB28AC8004232C0 /* Keys.swift */; };
 		EB91A46A1AB28B5C004232C0 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB91A4691AB28B5C004232C0 /* Keys.plist */; };
@@ -88,6 +90,8 @@
 		EB0A19F91AB2529A00942545 /* MistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0A19FE1AB2529A00942545 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB0A19FF1AB2529A00942545 /* MistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MistTests.swift; sourceTree = "<group>"; };
+		EB5BDD5F1AB9E9BF00A1DDFF /* VerifyInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyInterfaceController.swift; sourceTree = "<group>"; };
+		EB5BDD611AB9F30C00A1DDFF /* VerifyRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyRow.swift; sourceTree = "<group>"; };
 		EB91A4641AB2894B004232C0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EB91A4671AB28AC8004232C0 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EB91A4691AB28B5C004232C0 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
@@ -251,6 +255,7 @@
 				EB94CAAC1AB8FD2A000CC4BF /* ForecastRow.swift */,
 				EB94CAAE1AB900F4000CC4BF /* HeaderRow.swift */,
 				EBC40E1D1AB9D53500FE9C7A /* CreateRow.swift */,
+				EB5BDD611AB9F30C00A1DDFF /* VerifyRow.swift */,
 			);
 			path = "Mist WatchKit Extension";
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			children = (
 				EBB3CD661AB8F46E00CD74EA /* MainInterfaceController.swift */,
 				EBB3CD461AB8C0F900CD74EA /* ForecastInterfaceController.swift */,
+				EB5BDD5F1AB9E9BF00A1DDFF /* VerifyInterfaceController.swift */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
@@ -418,6 +424,7 @@
 					};
 					EBB3CD4D1AB8C0F900CD74EA = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = JDJKS788L2;
 					};
 				};
 			};
@@ -572,8 +579,10 @@
 			files = (
 				EBB3CD671AB8F46E00CD74EA /* MainInterfaceController.swift in Sources */,
 				EBB3CD6B1AB8F5C400CD74EA /* LocationRow.swift in Sources */,
+				EB5BDD621AB9F30C00A1DDFF /* VerifyRow.swift in Sources */,
 				EBC40E1E1AB9D53500FE9C7A /* CreateRow.swift in Sources */,
 				EBB3CD471AB8C0F900CD74EA /* ForecastInterfaceController.swift in Sources */,
+				EB5BDD601AB9E9BF00A1DDFF /* VerifyInterfaceController.swift in Sources */,
 				EB94CAAD1AB8FD2A000CC4BF /* ForecastRow.swift in Sources */,
 				EBB3CD491AB8C0F900CD74EA /* GlanceController.swift in Sources */,
 				EB94CAAF1AB900F4000CC4BF /* HeaderRow.swift in Sources */,
@@ -815,6 +824,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -822,6 +833,7 @@
 				IBSC_MODULE = Mist_WatchKit_Extension;
 				INFOPLIST_FILE = "Mist WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
@@ -832,9 +844,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				IBSC_MODULE = Mist_WatchKit_Extension;
 				INFOPLIST_FILE = "Mist WatchKit App/Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
 				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
