@@ -20,7 +20,7 @@
 		EB94CAAD1AB8FD2A000CC4BF /* ForecastRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94CAAC1AB8FD2A000CC4BF /* ForecastRow.swift */; };
 		EB94CAAF1AB900F4000CC4BF /* HeaderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94CAAE1AB900F4000CC4BF /* HeaderRow.swift */; };
 		EB97D0111AB51B1D0070768F /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB97D0101AB51B1D0070768F /* Flickr.swift */; };
-		EBB3CD471AB8C0F900CD74EA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3CD461AB8C0F900CD74EA /* InterfaceController.swift */; };
+		EBB3CD471AB8C0F900CD74EA /* ForecastInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3CD461AB8C0F900CD74EA /* ForecastInterfaceController.swift */; };
 		EBB3CD491AB8C0F900CD74EA /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3CD481AB8C0F900CD74EA /* GlanceController.swift */; };
 		EBB3CD4B1AB8C0F900CD74EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB3CD4A1AB8C0F900CD74EA /* Images.xcassets */; };
 		EBB3CD4F1AB8C0F900CD74EA /* Mist WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = EBB3CD4E1AB8C0F900CD74EA /* Mist WatchKit App.app */; };
@@ -95,7 +95,7 @@
 		EB97D0101AB51B1D0070768F /* Flickr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
 		EBB3CD421AB8C0F900CD74EA /* Mist WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mist WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB3CD451AB8C0F900CD74EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBB3CD461AB8C0F900CD74EA /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		EBB3CD461AB8C0F900CD74EA /* ForecastInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastInterfaceController.swift; sourceTree = "<group>"; };
 		EBB3CD481AB8C0F900CD74EA /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 		EBB3CD4A1AB8C0F900CD74EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		EBB3CD4E1AB8C0F900CD74EA /* Mist WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mist WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -282,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB3CD661AB8F46E00CD74EA /* MainInterfaceController.swift */,
-				EBB3CD461AB8C0F900CD74EA /* InterfaceController.swift */,
+				EBB3CD461AB8C0F900CD74EA /* ForecastInterfaceController.swift */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
@@ -569,7 +569,7 @@
 			files = (
 				EBB3CD671AB8F46E00CD74EA /* MainInterfaceController.swift in Sources */,
 				EBB3CD6B1AB8F5C400CD74EA /* LocationRow.swift in Sources */,
-				EBB3CD471AB8C0F900CD74EA /* InterfaceController.swift in Sources */,
+				EBB3CD471AB8C0F900CD74EA /* ForecastInterfaceController.swift in Sources */,
 				EB94CAAD1AB8FD2A000CC4BF /* ForecastRow.swift in Sources */,
 				EBB3CD491AB8C0F900CD74EA /* GlanceController.swift in Sources */,
 				EB94CAAF1AB900F4000CC4BF /* HeaderRow.swift in Sources */,

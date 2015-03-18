@@ -1,5 +1,5 @@
 //
-//  InterfaceController.swift
+//  ForecastInterfaceController.swift
 //  Mist WatchKit Extension
 //
 //  Created by Jack Cook on 3/17/15.
@@ -9,7 +9,7 @@
 import WatchKit
 import Foundation
 
-class InterfaceController: WKInterfaceController {
+class ForecastInterfaceController: WKInterfaceController {
     
     @IBOutlet var nameLabel: WKInterfaceLabel!
     @IBOutlet var temperatureLabel: WKInterfaceLabel!

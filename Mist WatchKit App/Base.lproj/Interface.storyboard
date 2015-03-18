@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="-319" y="203"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Forecast Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Mist_WatchKit_App" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="ForecastInterfaceController" customModule="Mist_WatchKit_Extension">
                     <items>
                         <label alignment="center" text="NEW YORK" id="Qq7-0o-db0">
                             <fontDescription key="font" type="system" pointSize="18"/>
@@ -51,7 +51,7 @@
                                 <separator alignment="center" alpha="0.0" id="BCd-xE-CAV"/>
                                 <separator alignment="center" alpha="0.0" id="sFa-PV-DiQ"/>
                                 <separator alignment="center" alpha="0.0" id="g7H-As-kOe"/>
-                                <imageView width="52" height="35" alignment="center" image="Snow" id="uIh-KP-NPa"/>
+                                <imageView width="52" height="35" alignment="center" verticalAlignment="center" image="Snow" id="uIh-KP-NPa"/>
                             </items>
                         </group>
                         <label alignment="center" text="light snow" id="Yrh-yQ-G5E">
@@ -111,15 +111,38 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-52" y="193.75"/>
+            <point key="canvasLocation" x="-52" y="202.75"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
                 <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="Mist_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="gv7-I2-MZq"/>
-                        <group alignment="left" id="eew-Gs-W6Y"/>
+                        <group alignment="left" id="gv7-I2-MZq">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="NEW YORK" id="I38-Em-dek">
+                                    <fontDescription key="font" type="system" pointSize="20"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group alignment="left" layout="vertical" id="eew-Gs-W6Y">
+                            <items>
+                                <group width="1" alignment="left" id="Q7t-7v-o3w">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="29º" id="EjP-8l-PeS">
+                                            <fontDescription key="font" type="system" pointSize="28"/>
+                                        </label>
+                                        <separator alignment="center" verticalAlignment="center" alpha="0.0" id="YVh-Vz-aas"/>
+                                        <separator alignment="center" verticalAlignment="center" alpha="0.0" id="hPz-ti-1gx"/>
+                                        <separator alignment="center" verticalAlignment="center" alpha="0.0" id="OU3-b3-dfj"/>
+                                        <imageView width="52" height="35" alignment="center" verticalAlignment="center" image="Snow" id="x4s-JI-l7x"/>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="light snow" id="Fye-Nx-Kp6">
+                                    <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
                 </glanceController>
