@@ -57,6 +57,15 @@ class GlanceController: WKInterfaceController {
         
         let description = data["description"] as String
         self.descriptionLabel.setText(description.lowercaseString)
+        
+        if WKInterfaceDevice.currentDevice().screenBounds.width < 156 {
+            self.weatherImage.setWidth(64)
+            self.weatherImage.setHeight(48)
+            
+            let attributes = [NSFontAttributeName: UIFont.systemFontOfSize(38), NSForegroundColorAttributeName: UIColor(red: 0.35, green: 0.71, blue: 0.95, alpha: 1)]
+            let attributedString = NSAttributedString(string: "\(Int(temperature))º", attributes: attributes)
+            self.temperatureLabel.setAttributedText(attributedString)
+        }
     }
     
     func checkForData() {

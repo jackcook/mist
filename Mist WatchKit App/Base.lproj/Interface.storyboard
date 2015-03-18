@@ -109,7 +109,8 @@
                         <label alignment="center" text="light snow" id="Yrh-yQ-G5E">
                             <fontDescription key="font" type="italicSystem" pointSize="16"/>
                         </label>
-                        <separator alignment="left" alpha="0.0" id="iwY-3W-Dzf"/>
+                        <separator alignment="left" alpha="0.0" id="wf3-HF-R4i"/>
+                        <separator alignment="left" alpha="0.0" id="vFM-lv-daw"/>
                         <table alignment="left" id="YTN-eh-enP">
                             <items>
                                 <tableRow identifier="HeaderRow" id="EUG-Yj-QCB" customClass="HeaderRow" customModule="Mist_WatchKit_Extension">
@@ -178,12 +179,12 @@
                             <items>
                                 <group width="1" alignment="center" id="Q7t-7v-o3w">
                                     <items>
-                                        <imageView width="64" height="48" alignment="center" verticalAlignment="center" image="Snow" id="x4s-JI-l7x"/>
+                                        <imageView width="70" height="53" alignment="center" verticalAlignment="center" image="Snow" id="x4s-JI-l7x"/>
                                         <separator alignment="center" verticalAlignment="center" alpha="0.0" id="hPz-ti-1gx"/>
                                         <separator alignment="center" verticalAlignment="center" alpha="0.0" id="OU3-b3-dfj"/>
                                         <label alignment="center" verticalAlignment="center" text="29º" id="EjP-8l-PeS">
                                             <color key="textColor" red="0.34509803921568627" green="0.70588235294117641" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="font" type="system" pointSize="38"/>
+                                            <fontDescription key="font" type="system" pointSize="42"/>
                                         </label>
                                     </items>
                                 </group>
