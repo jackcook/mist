@@ -42,6 +42,14 @@ class MainInterfaceController: WKInterfaceController {
         }
     }
     
+    override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
+        if rowIndex == table.numberOfRows {
+            self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: WKTextInputMode.Plain) { (results) -> Void in
+                println(results)
+            }
+        }
+    }
+    
     override func contextForSegueWithIdentifier(segueIdentifier: String, inTable table: WKInterfaceTable, rowIndex: Int) -> AnyObject? {
         return self.weatherData[rowIndex]
     }
