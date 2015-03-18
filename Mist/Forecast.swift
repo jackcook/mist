@@ -36,6 +36,11 @@ class ForecastAPI: NSObject {
     class func loadToDefaults(forecast: ForecastAPI) {
         let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
         
+//        let path = NSBundle.mainBundle().pathForResource("Weather", ofType: "plist")!
+//        let data = NSPropertyListSerialization.dataFromPropertyList(path, format: .XMLFormat_v1_0, errorDescription: nil)!
+//        let contents = NSString(data: data, encoding: NSUTF8StringEncoding)
+//        println(contents)
+        
         var weatherData = [AnyObject]()
         if let wd = defaults?.arrayForKey("WeatherData") {
             weatherData = wd
@@ -95,6 +100,9 @@ class ForecastAPI: NSObject {
         
         weatherData.append(weatherObject)
         defaults?.setObject(weatherData, forKey: "WeatherData")
+        
+//        let cocoaArray = weatherData as NSArray
+//        cocoaArray.writeToFile(path, atomically: false)
     }
     
     var location: String!

@@ -15,9 +15,18 @@ class MainInterfaceController: WKInterfaceController {
     var weatherData: [[String: AnyObject]]!
     
     override func willActivate() {
-        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
-        self.weatherData = defaults?.arrayForKey("WeatherData") as [[String: AnyObject]]
+        self.setTitle("Mist")
         
+        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
+        if let wd = defaults?.arrayForKey("WeatherData") as? [[String: AnyObject]] {
+            self.weatherData = wd
+            loadLocations()
+        } else {
+            self.presentControllerWithName("ErrorInterfaceController", context: nil)
+        }
+    }
+    
+    func loadLocations() {
         var rowTypes = [String]()
         
         for location in self.weatherData {

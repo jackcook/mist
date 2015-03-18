@@ -72,6 +72,20 @@
             </objects>
             <point key="canvasLocation" x="-319" y="-63"/>
         </scene>
+        <!--ErrorInterfaceController-->
+        <scene sceneID="85p-BQ-3cm">
+            <objects>
+                <controller identifier="ErrorInterfaceController" id="ArV-an-BpB" customClass="ErrorInterfaceController" customModule="Mist_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Error" textAlignment="center" id="ExE-v9-o1L">
+                            <fontDescription key="font" type="system" pointSize="22"/>
+                        </label>
+                        <label alignment="center" verticalAlignment="center" text="Please load the Mist iOS app before using this watch app" textAlignment="center" numberOfLines="0" id="gMU-fN-NzP"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-52" y="-63"/>
+        </scene>
         <!--Forecast Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
