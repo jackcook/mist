@@ -81,7 +81,7 @@
                         <label alignment="center" text="Error" textAlignment="center" id="ExE-v9-o1L">
                             <fontDescription key="font" type="system" pointSize="22"/>
                         </label>
-                        <label alignment="center" verticalAlignment="center" text="Please load the Mist iOS app before using this watch app" textAlignment="center" numberOfLines="0" id="gMU-fN-NzP"/>
+                        <label alignment="center" verticalAlignment="center" text="Please load the Mist iOS app before using the Mist watch app" textAlignment="center" numberOfLines="0" id="gMU-fN-NzP"/>
                     </items>
                 </controller>
             </objects>
@@ -187,6 +187,7 @@
                                         </label>
                                     </items>
                                 </group>
+                                <label alignment="center" verticalAlignment="center" hidden="YES" text="Please open the Mist iOS app before using the Mist watch app" textAlignment="center" numberOfLines="0" id="pmT-P3-oGK"/>
                                 <label alignment="right" verticalAlignment="bottom" text="NEW YORK" id="yun-IE-TtB">
                                     <color key="textColor" red="0.26666666666666666" green="0.84313725490196079" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
@@ -198,6 +199,13 @@
                         </group>
                     </items>
                     <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Fye-Nx-Kp6" id="mhp-Nh-Qva"/>
+                        <outlet property="locationLabel" destination="yun-IE-TtB" id="Qpt-Dd-Yj0"/>
+                        <outlet property="noticeLabel" destination="pmT-P3-oGK" id="3M1-Em-x3h"/>
+                        <outlet property="temperatureLabel" destination="EjP-8l-PeS" id="JbY-NT-TfC"/>
+                        <outlet property="weatherImage" destination="x4s-JI-l7x" id="InE-W5-dfZ"/>
+                    </connections>
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="-319" y="515"/>

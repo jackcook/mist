@@ -15,6 +15,8 @@ class MainInterfaceController: WKInterfaceController {
     var weatherData: [[String: AnyObject]]!
     
     override func willActivate() {
+        super.willActivate()
+        
         let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
         if let wd = defaults?.arrayForKey("WeatherData") as? [[String: AnyObject]] {
             self.weatherData = wd

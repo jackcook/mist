@@ -13,10 +13,14 @@ class ErrorInterfaceController: WKInterfaceController {
     var timer: NSTimer!
     
     override func awakeWithContext(context: AnyObject?) {
+        super.awakeWithContext(context)
+        
         self.setTitle("")
     }
     
     override func willActivate() {
+        super.willActivate()
+        
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "checkForData", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
     }

@@ -12,20 +12,66 @@ import Foundation
 
 class GlanceController: WKInterfaceController {
 
+    @IBOutlet var weatherImage: WKInterfaceImage!
+    @IBOutlet var temperatureLabel: WKInterfaceLabel!
+    @IBOutlet var noticeLabel: WKInterfaceLabel!
+    @IBOutlet var locationLabel: WKInterfaceLabel!
+    @IBOutlet var descriptionLabel: WKInterfaceLabel!
+    
+    var timer: NSTimer!
+    var weatherData: [[String: AnyObject]]!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        // Configure interface objects here.
+        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
+        if let wd = defaults?.arrayForKey("WeatherData") as? [[String: AnyObject]] {
+            self.weatherData = wd
+            self.loadContent()
+        } else {
+            self.weatherImage.setHidden(true)
+            self.temperatureLabel.setHidden(true)
+            self.noticeLabel.setHidden(false)
+            self.locationLabel.setHidden(true)
+            self.descriptionLabel.setHidden(true)
+            
+            timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "checkForData", userInfo: nil, repeats: true)
+            NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
+        }
     }
-
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
+    
+    func loadContent() {
+        self.weatherImage.setHidden(false)
+        self.temperatureLabel.setHidden(false)
+        self.noticeLabel.setHidden(true)
+        self.locationLabel.setHidden(false)
+        self.descriptionLabel.setHidden(false)
+        
+        let data = self.weatherData[0]
+        self.weatherImage.setImageNamed("Snow")
+        
+        let temperature = data["temperature"] as Float
+        self.temperatureLabel.setText("\(Int(temperature))º")
+        
+        let location = data["name"] as String
+        self.locationLabel.setText(location)
+        
+        let description = data["description"] as String
+        self.descriptionLabel.setText(description.lowercaseString)
     }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+    
+    func checkForData() {
+        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
+        
+        if let done = defaults?.boolForKey("DoneLoading") {
+            if done {
+                timer.invalidate()
+                
+                if let wd = defaults?.arrayForKey("WeatherData") as? [[String: AnyObject]] {
+                    self.weatherData = wd
+                    self.loadContent()
+                }
+            }
+        }
     }
-
 }

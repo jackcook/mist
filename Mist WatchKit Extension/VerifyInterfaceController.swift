@@ -17,11 +17,15 @@ class VerifyInterfaceController: WKInterfaceController {
     var autocomplete = [String]()
     
     override func awakeWithContext(context: AnyObject?) {
+        super.awakeWithContext(context)
+        
         self.setTitle("Loading...")
         self.results = context as [String]
     }
     
     override func willActivate() {
+        super.willActivate()
+        
         WKInterfaceController.openParentApplication(["results": results], reply: { (data, error) -> Void in
             println("")
             let autocompleteResults = data as [String: [String]]

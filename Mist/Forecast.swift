@@ -48,6 +48,9 @@ class ForecastAPI: NSObject {
         
         var weatherObject = [String: AnyObject]()
         weatherObject["name"] = forecast.location
+        weatherObject["temperature"] = forecast.current.temperature
+        weatherObject["description"] = forecast.current.summary
+        weatherObject["icon"] = forecast.current.icon
         
         var hourlyObjects = [[String: AnyObject]]()
         var dailyObjects = [[String: AnyObject]]()
