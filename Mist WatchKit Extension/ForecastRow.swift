@@ -8,7 +8,7 @@
 
 import WatchKit
 
-class HourlyRow: NSObject {
+class ForecastRow: NSObject {
     
     @IBOutlet var timeLabel: WKInterfaceLabel!
     @IBOutlet var weatherImage: WKInterfaceImage!

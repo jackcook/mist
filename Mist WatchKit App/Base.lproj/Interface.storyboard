@@ -73,27 +73,30 @@
                                         <outlet property="headerLabel" destination="Ysw-JP-fin" id="ntX-Gv-bND"/>
                                     </connections>
                                 </tableRow>
-                                <tableRow identifier="HourlyRow" id="Hsi-Vz-6ay" customClass="HourlyRow" customModule="Mist_WatchKit_Extension">
+                                <tableRow identifier="ForecastRow" id="Hsi-Vz-6ay" customClass="ForecastRow" customModule="Mist_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="faw-dv-uBA">
                                         <items>
                                             <label alignment="left" verticalAlignment="center" text="12 PM" id="8hM-h1-2hf">
-                                                <fontDescription key="font" type="system" pointSize="11"/>
+                                                <fontDescription key="font" type="system" pointSize="10"/>
                                             </label>
                                             <imageView width="40" height="30" alignment="center" verticalAlignment="center" image="Snow" id="pcY-nX-GrS"/>
                                             <group width="38" alignment="right" verticalAlignment="center" layout="vertical" id="aw0-75-r60">
                                                 <items>
-                                                    <label alignment="right" text="32º" id="DRq-vD-d5Q">
-                                                        <fontDescription key="font" type="system" pointSize="14"/>
+                                                    <label height="14.5" alignment="right" text="32º" id="DRq-vD-d5Q">
+                                                        <fontDescription key="font" type="system" pointSize="10"/>
                                                     </label>
                                                     <label alignment="right" verticalAlignment="bottom" text="Cloudy" id="b8J-JE-GXi">
-                                                        <fontDescription key="font" type="system" pointSize="9"/>
+                                                        <fontDescription key="font" type="system" pointSize="8"/>
                                                     </label>
                                                 </items>
                                             </group>
                                         </items>
                                     </group>
                                     <connections>
+                                        <outlet property="descriptionLabel" destination="b8J-JE-GXi" id="GHp-qg-Kw5"/>
+                                        <outlet property="temperatureLabel" destination="DRq-vD-d5Q" id="0VD-Ey-Ggi"/>
                                         <outlet property="timeLabel" destination="8hM-h1-2hf" id="iqD-d5-pxV"/>
+                                        <outlet property="weatherImage" destination="pcY-nX-GrS" id="m9c-AS-e0D"/>
                                     </connections>
                                 </tableRow>
                             </items>

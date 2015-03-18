@@ -17,7 +17,7 @@
 		EB91A4651AB2894B004232C0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91A4641AB2894B004232C0 /* MainViewController.swift */; };
 		EB91A4681AB28AC8004232C0 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB91A4671AB28AC8004232C0 /* Keys.swift */; };
 		EB91A46A1AB28B5C004232C0 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EB91A4691AB28B5C004232C0 /* Keys.plist */; };
-		EB94CAAD1AB8FD2A000CC4BF /* HourlyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94CAAC1AB8FD2A000CC4BF /* HourlyRow.swift */; };
+		EB94CAAD1AB8FD2A000CC4BF /* ForecastRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94CAAC1AB8FD2A000CC4BF /* ForecastRow.swift */; };
 		EB94CAAF1AB900F4000CC4BF /* HeaderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB94CAAE1AB900F4000CC4BF /* HeaderRow.swift */; };
 		EB97D0111AB51B1D0070768F /* Flickr.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB97D0101AB51B1D0070768F /* Flickr.swift */; };
 		EBB3CD471AB8C0F900CD74EA /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3CD461AB8C0F900CD74EA /* InterfaceController.swift */; };
@@ -90,7 +90,7 @@
 		EB91A4641AB2894B004232C0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EB91A4671AB28AC8004232C0 /* Keys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EB91A4691AB28B5C004232C0 /* Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
-		EB94CAAC1AB8FD2A000CC4BF /* HourlyRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyRow.swift; sourceTree = "<group>"; };
+		EB94CAAC1AB8FD2A000CC4BF /* ForecastRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastRow.swift; sourceTree = "<group>"; };
 		EB94CAAE1AB900F4000CC4BF /* HeaderRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderRow.swift; sourceTree = "<group>"; };
 		EB97D0101AB51B1D0070768F /* Flickr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flickr.swift; sourceTree = "<group>"; };
 		EBB3CD421AB8C0F900CD74EA /* Mist WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Mist WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,7 +246,7 @@
 				EBB3CD4A1AB8C0F900CD74EA /* Images.xcassets */,
 				EBB3CD441AB8C0F900CD74EA /* Supporting Files */,
 				EBB3CD6A1AB8F5C400CD74EA /* LocationRow.swift */,
-				EB94CAAC1AB8FD2A000CC4BF /* HourlyRow.swift */,
+				EB94CAAC1AB8FD2A000CC4BF /* ForecastRow.swift */,
 				EB94CAAE1AB900F4000CC4BF /* HeaderRow.swift */,
 			);
 			path = "Mist WatchKit Extension";
@@ -570,7 +570,7 @@
 				EBB3CD671AB8F46E00CD74EA /* MainInterfaceController.swift in Sources */,
 				EBB3CD6B1AB8F5C400CD74EA /* LocationRow.swift in Sources */,
 				EBB3CD471AB8C0F900CD74EA /* InterfaceController.swift in Sources */,
-				EB94CAAD1AB8FD2A000CC4BF /* HourlyRow.swift in Sources */,
+				EB94CAAD1AB8FD2A000CC4BF /* ForecastRow.swift in Sources */,
 				EBB3CD491AB8C0F900CD74EA /* GlanceController.swift in Sources */,
 				EB94CAAF1AB900F4000CC4BF /* HeaderRow.swift in Sources */,
 			);

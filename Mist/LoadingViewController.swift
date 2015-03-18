@@ -50,19 +50,29 @@ class LoadingViewController: UIViewController {
             var hourlyObjects = [[String: AnyObject]]()
             var dailyObjects = [[String: AnyObject]]()
             
+            var i = 0
             for hourly in forecast.hourly.forecast {
-                var hourlyObject = [String: AnyObject]()
+                if i == 0 || i % 3 == 0 {
+                    var hourlyObject = [String: AnyObject]()
+                    
+                    let formatter = NSDateFormatter()
+                    formatter.dateFormat = "ha"
+                    hourlyObject["hour"] = formatter.stringFromDate(hourly.time)
+                    hourlyObject["icon"] = hourly.icon
+                    hourlyObject["temperature"] = hourly.temperature
+                    hourlyObject["description"] = hourly.summary
+                    
+                    hourlyObjects.append(hourlyObject)
+                }
                 
-                let formatter = NSDateFormatter()
-                formatter.dateFormat = "hh"
-                hourlyObject["hour"] = formatter.stringFromDate(hourly.time)
-                hourlyObject["icon"] = hourly.icon
-                hourlyObject["temperature"] = hourly.temperature
-                hourlyObject["description"] = hourly.summary
+                i += 1
                 
-                hourlyObjects.append(hourlyObject)
+                if i >= 12 {
+                    break
+                }
             }
             
+            i = 0
             for daily in forecast.daily.forecast {
                 var dailyObject = [String: AnyObject]()
                 
@@ -75,6 +85,12 @@ class LoadingViewController: UIViewController {
                 dailyObject["description"] = daily.summary
                 
                 dailyObjects.append(dailyObject)
+                
+                i += 1
+                
+                if i >= 3 {
+                    break
+                }
             }
             
             weatherObject["hourly"] = hourlyObjects
