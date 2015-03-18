@@ -97,16 +97,16 @@
                         </label>
                         <group width="1" alignment="left" id="RKr-dm-sjI">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="29º" id="NIY-4q-PNR">
+                                <label alignment="center" verticalAlignment="center" text="36º" id="NIY-4q-PNR">
                                     <fontDescription key="font" type="system" pointSize="28"/>
                                 </label>
                                 <separator alignment="center" alpha="0.0" id="BCd-xE-CAV"/>
                                 <separator alignment="center" alpha="0.0" id="sFa-PV-DiQ"/>
                                 <separator alignment="center" alpha="0.0" id="g7H-As-kOe"/>
-                                <imageView width="52" height="35" alignment="center" verticalAlignment="center" image="Snow" id="uIh-KP-NPa"/>
+                                <imageView width="46" height="35" alignment="center" verticalAlignment="center" image="clear-day" id="uIh-KP-NPa"/>
                             </items>
                         </group>
-                        <label alignment="center" text="light snow" id="Yrh-yQ-G5E">
+                        <label alignment="center" text="clear" id="Yrh-yQ-G5E">
                             <fontDescription key="font" type="italicSystem" pointSize="16"/>
                         </label>
                         <separator alignment="left" alpha="0.0" id="wf3-HF-R4i"/>
@@ -132,7 +132,7 @@
                                             <label alignment="left" verticalAlignment="center" text="12 PM" id="8hM-h1-2hf">
                                                 <fontDescription key="font" type="system" pointSize="10"/>
                                             </label>
-                                            <imageView width="40" height="30" alignment="center" verticalAlignment="center" image="Snow" id="pcY-nX-GrS"/>
+                                            <imageView width="40" height="30" alignment="center" verticalAlignment="center" image="clear-day" id="pcY-nX-GrS"/>
                                             <group width="38" alignment="right" verticalAlignment="center" layout="vertical" id="aw0-75-r60">
                                                 <items>
                                                     <label height="14.5" alignment="right" text="32º" id="DRq-vD-d5Q">
@@ -179,10 +179,10 @@
                             <items>
                                 <group width="1" alignment="center" id="Q7t-7v-o3w">
                                     <items>
-                                        <imageView width="70" height="53" alignment="center" verticalAlignment="center" image="Snow" id="x4s-JI-l7x"/>
+                                        <imageView width="70" height="53" alignment="center" verticalAlignment="center" image="clear-day" id="x4s-JI-l7x"/>
                                         <separator alignment="center" verticalAlignment="center" alpha="0.0" id="hPz-ti-1gx"/>
                                         <separator alignment="center" verticalAlignment="center" alpha="0.0" id="OU3-b3-dfj"/>
-                                        <label alignment="center" verticalAlignment="center" text="29º" id="EjP-8l-PeS">
+                                        <label alignment="center" verticalAlignment="center" text="36º" id="EjP-8l-PeS">
                                             <color key="textColor" red="0.34509803921568627" green="0.70588235294117641" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="font" type="system" pointSize="42"/>
                                         </label>
@@ -192,7 +192,7 @@
                                 <label alignment="right" verticalAlignment="bottom" text="NEW YORK" id="yun-IE-TtB">
                                     <color key="textColor" red="0.26666666666666666" green="0.84313725490196079" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
-                                <label alignment="right" verticalAlignment="bottom" text="light snow" id="Fye-Nx-Kp6">
+                                <label alignment="right" verticalAlignment="bottom" text="clear" id="Fye-Nx-Kp6">
                                     <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="font" type="italicSystem" pointSize="13"/>
                                 </label>
