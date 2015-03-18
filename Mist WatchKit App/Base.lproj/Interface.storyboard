@@ -71,7 +71,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="258" y="515"/>
+            <point key="canvasLocation" x="-52" y="515"/>
         </scene>
         <!--ErrorInterfaceController-->
         <scene sceneID="85p-BQ-3cm">
@@ -165,40 +165,34 @@
             </objects>
             <point key="canvasLocation" x="-52" y="202.75"/>
         </scene>
-        <!--LoadingInterfaceController-->
-        <scene sceneID="la9-hZ-ewG">
-            <objects>
-                <controller identifier="LoadingInterfaceController" id="G9Q-Fs-WgF" customClass="LoadingInterfaceController" customModule="Mist_WatchKit_Extension"/>
-            </objects>
-            <point key="canvasLocation" x="-52" y="515"/>
-        </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
             <objects>
-                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="Mist_WatchKit_App" customModuleProvider="target">
+                <glanceController spacing="0.0" topTemplateType="body1Group" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="Mist_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group alignment="left" id="gv7-I2-MZq">
+                        <label alignment="left" text="Mist" id="l2c-jW-DqB">
+                            <color key="textColor" red="0.44705882352941173" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                        </label>
+                        <group alignment="left" id="gv7-I2-MZq"/>
+                        <group alignment="left" layout="vertical" spacing="0.0" id="eew-Gs-W6Y">
                             <items>
-                                <label alignment="center" verticalAlignment="center" text="NEW YORK" id="I38-Em-dek">
-                                    <fontDescription key="font" type="system" pointSize="20"/>
-                                </label>
-                            </items>
-                        </group>
-                        <group alignment="left" layout="vertical" id="eew-Gs-W6Y">
-                            <items>
-                                <group width="1" alignment="left" id="Q7t-7v-o3w">
+                                <group width="1" alignment="center" id="Q7t-7v-o3w">
                                     <items>
-                                        <label alignment="center" verticalAlignment="center" text="29º" id="EjP-8l-PeS">
-                                            <fontDescription key="font" type="system" pointSize="28"/>
-                                        </label>
-                                        <separator alignment="center" verticalAlignment="center" alpha="0.0" id="YVh-Vz-aas"/>
+                                        <imageView width="64" height="48" alignment="center" verticalAlignment="center" image="Snow" id="x4s-JI-l7x"/>
                                         <separator alignment="center" verticalAlignment="center" alpha="0.0" id="hPz-ti-1gx"/>
                                         <separator alignment="center" verticalAlignment="center" alpha="0.0" id="OU3-b3-dfj"/>
-                                        <imageView width="52" height="35" alignment="center" verticalAlignment="center" image="Snow" id="x4s-JI-l7x"/>
+                                        <label alignment="center" verticalAlignment="center" text="29º" id="EjP-8l-PeS">
+                                            <color key="textColor" red="0.34509803921568627" green="0.70588235294117641" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="38"/>
+                                        </label>
                                     </items>
                                 </group>
-                                <label alignment="center" text="light snow" id="Fye-Nx-Kp6">
-                                    <fontDescription key="font" type="italicSystem" pointSize="16"/>
+                                <label alignment="right" verticalAlignment="bottom" text="NEW YORK" id="yun-IE-TtB">
+                                    <color key="textColor" red="0.26666666666666666" green="0.84313725490196079" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <label alignment="right" verticalAlignment="bottom" text="light snow" id="Fye-Nx-Kp6">
+                                    <color key="textColor" red="0.62745098039215685" green="0.62745098039215685" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="font" type="italicSystem" pointSize="13"/>
                                 </label>
                             </items>
                         </group>

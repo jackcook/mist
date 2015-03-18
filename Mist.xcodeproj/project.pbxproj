@@ -253,7 +253,6 @@
 			children = (
 				EBB3CD681AB8F50400CD74EA /* Interface Controllers */,
 				EBB3CD651AB8ED4C00CD74EA /* Mist WatchKit Extension.entitlements */,
-				EBB3CD481AB8C0F900CD74EA /* GlanceController.swift */,
 				EBB3CD4A1AB8C0F900CD74EA /* Images.xcassets */,
 				EBB3CD441AB8C0F900CD74EA /* Supporting Files */,
 				EBB3CD6A1AB8F5C400CD74EA /* LocationRow.swift */,
@@ -298,6 +297,7 @@
 				EBB3CD461AB8C0F900CD74EA /* ForecastInterfaceController.swift */,
 				EB5BDD5F1AB9E9BF00A1DDFF /* VerifyInterfaceController.swift */,
 				EB32AA901ABA1699005ACD6C /* ErrorInterfaceController.swift */,
+				EBB3CD481AB8C0F900CD74EA /* GlanceController.swift */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";
