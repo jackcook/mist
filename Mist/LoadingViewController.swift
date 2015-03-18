@@ -26,8 +26,6 @@ class LoadingViewController: UIViewController {
     var photos: [Photo]!
     var firstImage: UIImage!
     
-    var weatherData = [AnyObject]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -49,60 +47,7 @@ class LoadingViewController: UIViewController {
                 self.forecasts.append(forecast)
                 self.finishedRequests += 1
                 
-                var weatherObject = [String: AnyObject]()
-                weatherObject["name"] = location
-                
-                var hourlyObjects = [[String: AnyObject]]()
-                var dailyObjects = [[String: AnyObject]]()
-                
-                var i = 0
-                for hourly in forecast.hourly.forecast {
-                    if i == 0 || i % 3 == 0 {
-                        var hourlyObject = [String: AnyObject]()
-                        
-                        let formatter = NSDateFormatter()
-                        formatter.dateFormat = "ha"
-                        hourlyObject["hour"] = formatter.stringFromDate(hourly.time)
-                        hourlyObject["icon"] = hourly.icon
-                        hourlyObject["temperature"] = hourly.temperature
-                        hourlyObject["description"] = hourly.summary
-                        
-                        hourlyObjects.append(hourlyObject)
-                    }
-                    
-                    i += 1
-                    
-                    if i >= 12 {
-                        break
-                    }
-                }
-                
-                i = 0
-                for daily in forecast.daily.forecast {
-                    var dailyObject = [String: AnyObject]()
-                    
-                    let formatter = NSDateFormatter()
-                    formatter.dateFormat = "EEE"
-                    dailyObject["day"] = formatter.stringFromDate(daily.time)
-                    dailyObject["icon"] = daily.icon
-                    dailyObject["high"] = daily.temperatureMax
-                    dailyObject["low"] = daily.temperatureMin
-                    dailyObject["description"] = daily.summary
-                    
-                    dailyObjects.append(dailyObject)
-                    
-                    i += 1
-                    
-                    if i >= 3 {
-                        break
-                    }
-                }
-                
-                weatherObject["hourly"] = hourlyObjects
-                weatherObject["daily"] = dailyObjects
-                
-                self.weatherData.append(weatherObject)
-                
+                ForecastAPI.loadToDefaults(forecast)
                 self.finish()
             })
         }
@@ -124,10 +69,6 @@ class LoadingViewController: UIViewController {
     
     func finish() {
         if (finishedRequests == totalRequests) && animationFinished {
-            let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
-            defaults?.setObject(weatherData, forKey: "WeatherData")
-            println(weatherData)
-            
             self.performSegueWithIdentifier("mainSegue", sender: self)
             imageTimer.invalidate()
         }

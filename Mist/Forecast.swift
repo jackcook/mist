@@ -18,7 +18,9 @@ class ForecastAPI: NSObject {
         geocoder.geocodeAddressString(place, completionHandler: { (placemarks, error) -> Void in
             let coordinate = (placemarks[0] as CLPlacemark).location.coordinate
             self.getCurrentConditions(coordinate, completion: { (forecast, error) -> Void in
-                completion(forecast: forecast, error: error)
+                let f = forecast
+                f.location = place
+                completion(forecast: f, error: error)
             })
         })
     }
@@ -31,6 +33,71 @@ class ForecastAPI: NSObject {
         }
     }
     
+    class func loadToDefaults(forecast: ForecastAPI) {
+        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
+        
+        var weatherData = [AnyObject]()
+        if let wd = defaults?.arrayForKey("WeatherData") {
+            weatherData = wd
+        }
+        
+        var weatherObject = [String: AnyObject]()
+        weatherObject["name"] = forecast.location
+        
+        var hourlyObjects = [[String: AnyObject]]()
+        var dailyObjects = [[String: AnyObject]]()
+        
+        var i = 0
+        for hourly in forecast.hourly.forecast {
+            if i == 0 || i % 3 == 0 {
+                var hourlyObject = [String: AnyObject]()
+                
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "ha"
+                hourlyObject["hour"] = formatter.stringFromDate(hourly.time)
+                hourlyObject["icon"] = hourly.icon
+                hourlyObject["temperature"] = hourly.temperature
+                hourlyObject["description"] = hourly.summary
+                
+                hourlyObjects.append(hourlyObject)
+            }
+            
+            i += 1
+            
+            if i >= 12 {
+                break
+            }
+        }
+        
+        i = 0
+        for daily in forecast.daily.forecast {
+            var dailyObject = [String: AnyObject]()
+            
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "EEE"
+            dailyObject["day"] = formatter.stringFromDate(daily.time)
+            dailyObject["icon"] = daily.icon
+            dailyObject["high"] = daily.temperatureMax
+            dailyObject["low"] = daily.temperatureMin
+            dailyObject["description"] = daily.summary
+            
+            dailyObjects.append(dailyObject)
+            
+            i += 1
+            
+            if i >= 3 {
+                break
+            }
+        }
+        
+        weatherObject["hourly"] = hourlyObjects
+        weatherObject["daily"] = dailyObjects
+        
+        weatherData.append(weatherObject)
+        defaults?.setObject(weatherData, forKey: "WeatherData")
+    }
+    
+    var location: String!
     var latitude: Float!
     var longitude: Float!
     var timezone: String!

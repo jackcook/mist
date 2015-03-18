@@ -21,10 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication!, handleWatchKitExtensionRequest userInfo: [NSObject : AnyObject]!, reply: (([NSObject : AnyObject]!) -> Void)!) {
-        let voiceResults = userInfo["results"] as [String]
-        Places.autocomplete(voiceResults[0], completion: { (results, error) -> Void in
-            println(results)
-            reply(["results": results])
-        })
+        if let voiceResults = userInfo["results"] as? [String] {
+            Places.autocomplete(voiceResults[0], completion: { (results, error) -> Void in
+                println(results)
+                reply(["results": results])
+            })
+        } else if let city = userInfo["city"] as? [String] {
+//            ForecastAPI.getCurrentConditions(city, completion: { (forecast, error) -> Void in
+//                
+//            })
+        }
     }
 }

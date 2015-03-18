@@ -19,7 +19,6 @@ class VerifyInterfaceController: WKInterfaceController {
         tableView.setNumberOfRows(results.count, withRowType: "VerifyRow")
         
         for i in 0...tableView.numberOfRows - 1 {
-            println(i)
             let row = tableView.rowControllerAtIndex(i) as VerifyRow
             row.locationName.setText(results[i])
         }
