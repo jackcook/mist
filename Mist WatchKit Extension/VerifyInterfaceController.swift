@@ -11,12 +11,13 @@ import WatchKit
 class VerifyInterfaceController: WKInterfaceController {
     
     @IBOutlet var tableView: WKInterfaceTable!
+    @IBOutlet var reminderLabel: WKInterfaceLabel!
     
     var results = [String]()
     var autocomplete = [String]()
     
     override func awakeWithContext(context: AnyObject?) {
-        self.setTitle("Loading")
+        self.setTitle("Loading...")
         self.results = context as [String]
     }
     
@@ -31,7 +32,8 @@ class VerifyInterfaceController: WKInterfaceController {
     
     func loadAutocomplete() {
         self.setTitle("Which one?")
-        tableView.setNumberOfRows(results.count, withRowType: "VerifyRow")
+        self.reminderLabel.setHidden(true)
+        self.tableView.setNumberOfRows(results.count, withRowType: "VerifyRow")
         
         for i in 0...tableView.numberOfRows - 1 {
             let row = tableView.rowControllerAtIndex(i) as VerifyRow

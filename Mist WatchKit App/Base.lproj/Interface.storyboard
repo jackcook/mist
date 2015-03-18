@@ -44,11 +44,12 @@
             </objects>
             <point key="canvasLocation" x="-319" y="203"/>
         </scene>
-        <!--Which one?-->
+        <!--Loading...-->
         <scene sceneID="DBf-Ri-fvD">
             <objects>
-                <controller identifier="VerifyInterfaceController" title="Which one?" id="zIQ-K9-fLb" customClass="VerifyInterfaceController" customModule="Mist_WatchKit_Extension">
+                <controller identifier="VerifyInterfaceController" title="Loading..." id="zIQ-K9-fLb" customClass="VerifyInterfaceController" customModule="Mist_WatchKit_Extension">
                     <items>
+                        <label alignment="center" verticalAlignment="center" text="Make sure you have the Mist iOS app open to load new content" textAlignment="center" numberOfLines="0" id="E0u-8x-qpb"/>
                         <table alignment="left" id="u5b-gI-h00">
                             <items>
                                 <tableRow identifier="VerifyRow" id="OXF-xV-gcp" customClass="VerifyRow" customModule="Mist_WatchKit_Extension">
@@ -65,6 +66,7 @@
                         </table>
                     </items>
                     <connections>
+                        <outlet property="reminderLabel" destination="E0u-8x-qpb" id="TuV-a3-qVl"/>
                         <outlet property="tableView" destination="u5b-gI-h00" id="NBt-cc-317"/>
                     </connections>
                 </controller>
