@@ -26,10 +26,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 println(results)
                 reply(["results": results])
             })
-        } else if let city = userInfo["city"] as? [String] {
-//            ForecastAPI.getCurrentConditions(city, completion: { (forecast, error) -> Void in
-//                
-//            })
+        } else if let city = userInfo["load"] as? String {
+            ForecastAPI.getCurrentConditions(city, completion: { (forecast, error) -> Void in
+                ForecastAPI.loadToDefaults(forecast)
+                reply(["done": true])
+            })
         }
     }
 }

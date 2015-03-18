@@ -14,7 +14,6 @@ class Flickr {
     class func getPhoto(location: String, completion: (photos: [Photo]) -> Void) {
         let locationTag = location.stringByReplacingOccurrencesOfString(" ", withString: "%20")
         let url = "https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=\(Keys.flickrKey())&format=json&nojsoncallback=1&tags=\(locationTag)&group_id=1463451@N25&sort=relevance"
-        println(url)
         
         request(.GET, url).responseJSON { (_, _, json, error) -> Void in
             let json = JSON(json!)
