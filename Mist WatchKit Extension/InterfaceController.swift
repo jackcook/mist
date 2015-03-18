@@ -12,15 +12,25 @@ import Foundation
 class InterfaceController: WKInterfaceController {
     
     @IBOutlet var weatherImage: WKInterfaceImage!
+    @IBOutlet var tableView: WKInterfaceTable!
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
-        weatherImage.setImageNamed("Snow")
+        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
+        println(defaults?.objectForKey("test"))
+        
+        let locations = ["New York, NY", "San Francisco, CA", "Toronto, CA", "Chicago, IL", "Dallas, TX"]
+        
+        tableView.setNumberOfRows(locations.count, withRowType: "HourlyRow")
+        
+        for i in 0...tableView.numberOfRows - 1 {
+            let row = tableView.rowControllerAtIndex(i) as HourlyRow
+            row.timeLabel.setText("1 PM")
+        }
     }
 
     override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
 
