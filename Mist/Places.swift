@@ -20,7 +20,8 @@ class Places {
             if let predictions = json["predictions"].array {
                 for prediction in predictions {
                     if let description = prediction["description"].string {
-                        results.append(description)
+                        let descriptionParts = description.componentsSeparatedByString(", ")
+                        results.append("\(descriptionParts[0]), \(descriptionParts[1])")
                     }
                 }
             }

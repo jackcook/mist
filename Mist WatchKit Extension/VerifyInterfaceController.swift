@@ -13,11 +13,24 @@ class VerifyInterfaceController: WKInterfaceController {
     @IBOutlet var tableView: WKInterfaceTable!
     
     var results = [String]()
+    var autocomplete = [String]()
     
     override func awakeWithContext(context: AnyObject?) {
-        let context = context as [String: [String]]
-        self.results = context["results"]!
-        
+        self.setTitle("Loading")
+        self.results = context as [String]
+    }
+    
+    override func willActivate() {
+        WKInterfaceController.openParentApplication(["results": results], reply: { (data, error) -> Void in
+            println("")
+            let autocompleteResults = data as [String: [String]]
+            self.autocomplete = autocompleteResults["results"]!
+            self.loadAutocomplete()
+        })
+    }
+    
+    func loadAutocomplete() {
+        self.setTitle("Which one?")
         tableView.setNumberOfRows(results.count, withRowType: "VerifyRow")
         
         for i in 0...tableView.numberOfRows - 1 {

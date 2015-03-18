@@ -54,7 +54,7 @@ class MainInterfaceController: WKInterfaceController {
             self.presentTextInputControllerWithSuggestions(nil, allowedInputMode: .Plain) { (results) -> Void in
                 if results != nil {
                     let context = results
-                    self.pushControllerWithName("LoadingInterfaceController", context: context)
+                    self.presentControllerWithName("VerifyInterfaceController", context: context)
                 }
             }
         }
