@@ -30,6 +30,7 @@
 		EBB3CD671AB8F46E00CD74EA /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3CD661AB8F46E00CD74EA /* MainInterfaceController.swift */; };
 		EBB3CD6B1AB8F5C400CD74EA /* LocationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB3CD6A1AB8F5C400CD74EA /* LocationRow.swift */; };
 		EBBB75F91AB26D9700BA502A /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */; };
+		EBC40E1E1AB9D53500FE9C7A /* CreateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC40E1D1AB9D53500FE9C7A /* CreateRow.swift */; };
 		EBC67ED31AB4C2DA00D7EF4C /* Mozart.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC67ED21AB4C2DA00D7EF4C /* Mozart.swift */; };
 		EBD11C001AB3A8FA0023E9DC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD11BFE1AB3A8FA0023E9DC /* Crashlytics.framework */; };
 		EBD11C011AB3A8FA0023E9DC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD11BFF1AB3A8FA0023E9DC /* Fabric.framework */; };
@@ -107,6 +108,7 @@
 		EBB3CD661AB8F46E00CD74EA /* MainInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
 		EBB3CD6A1AB8F5C400CD74EA /* LocationRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRow.swift; sourceTree = "<group>"; };
 		EBBB75F81AB26D9700BA502A /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		EBC40E1D1AB9D53500FE9C7A /* CreateRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateRow.swift; sourceTree = "<group>"; };
 		EBC67ED21AB4C2DA00D7EF4C /* Mozart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mozart.swift; sourceTree = "<group>"; };
 		EBD11BFE1AB3A8FA0023E9DC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		EBD11BFF1AB3A8FA0023E9DC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -248,6 +250,7 @@
 				EBB3CD6A1AB8F5C400CD74EA /* LocationRow.swift */,
 				EB94CAAC1AB8FD2A000CC4BF /* ForecastRow.swift */,
 				EB94CAAE1AB900F4000CC4BF /* HeaderRow.swift */,
+				EBC40E1D1AB9D53500FE9C7A /* CreateRow.swift */,
 			);
 			path = "Mist WatchKit Extension";
 			sourceTree = "<group>";
@@ -569,6 +572,7 @@
 			files = (
 				EBB3CD671AB8F46E00CD74EA /* MainInterfaceController.swift in Sources */,
 				EBB3CD6B1AB8F5C400CD74EA /* LocationRow.swift in Sources */,
+				EBC40E1E1AB9D53500FE9C7A /* CreateRow.swift in Sources */,
 				EBB3CD471AB8C0F900CD74EA /* ForecastInterfaceController.swift in Sources */,
 				EB94CAAD1AB8FD2A000CC4BF /* ForecastRow.swift in Sources */,
 				EBB3CD491AB8C0F900CD74EA /* GlanceController.swift in Sources */,

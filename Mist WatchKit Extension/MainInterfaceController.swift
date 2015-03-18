@@ -12,19 +12,33 @@ class MainInterfaceController: WKInterfaceController {
 
     @IBOutlet var tableView: WKInterfaceTable!
     
-    var weatherData: Array<Dictionary<String, AnyObject>>!
+    var weatherData: [[String: AnyObject]]!
     
     override func willActivate() {
         let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
         self.weatherData = defaults?.arrayForKey("WeatherData") as [[String: AnyObject]]
         
-        tableView.setNumberOfRows(self.weatherData.count, withRowType: "LocationRow")
+        var rowTypes = [String]()
+        
+        for location in self.weatherData {
+            rowTypes.append("LocationRow")
+        }
+        
+        rowTypes.append("CreateRow")
+        
+        tableView.setRowTypes(rowTypes)
         
         for i in 0...tableView.numberOfRows - 1 {
-            let row = tableView.rowControllerAtIndex(i) as LocationRow
-            let data = self.weatherData[i]
-            let name = data["name"] as String
-            row.locationName.setText(name)
+            let row: AnyObject? = tableView.rowControllerAtIndex(i)
+            
+            if row is LocationRow {
+                let row = tableView.rowControllerAtIndex(i) as LocationRow
+                let data = self.weatherData[i]
+                let name = data["name"] as String
+                row.locationName.setText(name)
+            } else if row is CreateRow {
+                let row = tableView.rowControllerAtIndex(i) as CreateRow
+            }
         }
     }
     
