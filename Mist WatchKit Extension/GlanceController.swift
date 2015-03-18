@@ -12,6 +12,7 @@ import Foundation
 
 class GlanceController: WKInterfaceController {
 
+    @IBOutlet var topGroup: WKInterfaceGroup!
     @IBOutlet var weatherImage: WKInterfaceImage!
     @IBOutlet var temperatureLabel: WKInterfaceLabel!
     @IBOutlet var noticeLabel: WKInterfaceLabel!
@@ -29,8 +30,7 @@ class GlanceController: WKInterfaceController {
             self.weatherData = wd
             self.loadContent()
         } else {
-            self.weatherImage.setHidden(true)
-            self.temperatureLabel.setHidden(true)
+            self.topGroup.setHidden(true)
             self.noticeLabel.setHidden(false)
             self.locationLabel.setHidden(true)
             self.descriptionLabel.setHidden(true)
@@ -41,8 +41,7 @@ class GlanceController: WKInterfaceController {
     }
     
     func loadContent() {
-        self.weatherImage.setHidden(false)
-        self.temperatureLabel.setHidden(false)
+        self.topGroup.setHidden(false)
         self.noticeLabel.setHidden(true)
         self.locationLabel.setHidden(false)
         self.descriptionLabel.setHidden(false)

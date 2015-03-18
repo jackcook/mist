@@ -37,6 +37,10 @@ class LoadingViewController: UIViewController {
         
         imageTimer = NSTimer.scheduledTimerWithTimeInterval(0.025, target: self, selector: "updateLoader", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(imageTimer, forMode: NSRunLoopCommonModes)
+        
+        Places.autocomplete("new", completion: { (results, error) -> Void in
+            println(results)
+        })
     }
     
     func loadForecasts() {

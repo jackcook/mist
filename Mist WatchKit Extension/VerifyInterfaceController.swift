@@ -37,17 +37,17 @@ class VerifyInterfaceController: WKInterfaceController {
     func loadAutocomplete() {
         self.setTitle("Which one?")
         self.reminderLabel.setHidden(true)
-        self.tableView.setNumberOfRows(results.count, withRowType: "VerifyRow")
+        self.tableView.setNumberOfRows(autocomplete.count, withRowType: "VerifyRow")
         
         for i in 0...tableView.numberOfRows - 1 {
             let row = tableView.rowControllerAtIndex(i) as VerifyRow
-            row.locationName.setText(self.results[i])
+            row.locationName.setText(self.autocomplete[i])
         }
     }
     
     override func table(table: WKInterfaceTable, didSelectRowAtIndex rowIndex: Int) {
-        WKInterfaceController.openParentApplication(["load": results[rowIndex]], reply: { (data, error) -> Void in
-            self.popToRootController()
+        WKInterfaceController.openParentApplication(["load": autocomplete[rowIndex]], reply: { (data, error) -> Void in
+            self.dismissController()
         })
     }
 }

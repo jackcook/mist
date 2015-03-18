@@ -187,7 +187,7 @@
                                         </label>
                                     </items>
                                 </group>
-                                <label alignment="center" verticalAlignment="center" hidden="YES" text="Please open the Mist iOS app before using the Mist watch app" textAlignment="center" numberOfLines="0" id="pmT-P3-oGK"/>
+                                <label alignment="center" hidden="YES" text="Please open the Mist iOS app before using the Mist watch app" textAlignment="center" numberOfLines="0" id="pmT-P3-oGK"/>
                                 <label alignment="right" verticalAlignment="bottom" text="NEW YORK" id="yun-IE-TtB">
                                     <color key="textColor" red="0.26666666666666666" green="0.84313725490196079" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 </label>
@@ -204,6 +204,7 @@
                         <outlet property="locationLabel" destination="yun-IE-TtB" id="Qpt-Dd-Yj0"/>
                         <outlet property="noticeLabel" destination="pmT-P3-oGK" id="3M1-Em-x3h"/>
                         <outlet property="temperatureLabel" destination="EjP-8l-PeS" id="JbY-NT-TfC"/>
+                        <outlet property="topGroup" destination="Q7t-7v-o3w" id="pYc-yh-iff"/>
                         <outlet property="weatherImage" destination="x4s-JI-l7x" id="InE-W5-dfZ"/>
                     </connections>
                 </glanceController>
