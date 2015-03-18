@@ -34,8 +34,8 @@ class InterfaceController: WKInterfaceController {
         
         rowTypes.append("HeaderRow")
         
-        let hourlyData = self.weatherData["hourly"] as [String: AnyObject]
-        for (key, val) in hourlyData {
+        let hourlyData = self.weatherData["hourly"] as [[String: AnyObject]]
+        for hour in hourlyData {
             rowTypes.append("HourlyRow")
         }
         
@@ -52,7 +52,7 @@ class InterfaceController: WKInterfaceController {
             } else {
                 let hourlyRow = row as HourlyRow
                 
-                let hour = hourlyData["hour"]!
+                let hour = hourlyData[i]["hour"]!
                 hourlyRow.timeLabel.setText("\(hour)")
             }
 //            let name = locations[i]

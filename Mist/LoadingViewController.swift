@@ -47,19 +47,25 @@ class LoadingViewController: UIViewController {
             var weatherObject = [String: AnyObject]()
             weatherObject["name"] = "New York, NY"
             
-            var hourlyObject = [String: AnyObject]()
-            var dailyObject = [String: AnyObject]()
+            var hourlyObjects = [[String: AnyObject]]()
+            var dailyObjects = [[String: AnyObject]]()
             
             for hourly in forecast.hourly.forecast {
+                var hourlyObject = [String: AnyObject]()
+                
                 let formatter = NSDateFormatter()
                 formatter.dateFormat = "hh"
                 hourlyObject["hour"] = formatter.stringFromDate(hourly.time)
                 hourlyObject["icon"] = hourly.icon
                 hourlyObject["temperature"] = hourly.temperature
                 hourlyObject["description"] = hourly.summary
+                
+                hourlyObjects.append(hourlyObject)
             }
             
             for daily in forecast.daily.forecast {
+                var dailyObject = [String: AnyObject]()
+                
                 let formatter = NSDateFormatter()
                 formatter.dateFormat = "EEE"
                 dailyObject["day"] = formatter.stringFromDate(daily.time)
@@ -67,10 +73,12 @@ class LoadingViewController: UIViewController {
                 dailyObject["high"] = daily.temperatureMax
                 dailyObject["low"] = daily.temperatureMin
                 dailyObject["description"] = daily.summary
+                
+                dailyObjects.append(dailyObject)
             }
             
-            weatherObject["hourly"] = hourlyObject
-            weatherObject["daily"] = dailyObject
+            weatherObject["hourly"] = hourlyObjects
+            weatherObject["daily"] = dailyObjects
             
             self.weatherData.append(weatherObject)
             
