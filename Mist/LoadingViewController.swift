@@ -19,7 +19,7 @@ class LoadingViewController: UIViewController {
     var currentImage = 0
     var animationFinished = false
     var finishedRequests = 0
-    var totalRequests = 2
+    var totalRequests = 0
     
     var locations = ["New York, NY", "San Francisco, CA"]
     var forecasts = [ForecastAPI]()
@@ -33,7 +33,7 @@ class LoadingViewController: UIViewController {
         background.image = backgroundImage
         
         loadForecasts()
-        loadImages()
+//        loadImages()
         
         imageTimer = NSTimer.scheduledTimerWithTimeInterval(0.025, target: self, selector: "updateLoader", userInfo: nil, repeats: true)
         NSRunLoop.mainRunLoop().addTimer(imageTimer, forMode: NSRunLoopCommonModes)
@@ -50,7 +50,7 @@ class LoadingViewController: UIViewController {
                 self.forecasts.append(forecast)
                 self.finishedRequests += 1
                 
-                if weatherData?.count == 0 {
+                if weatherData == nil {
                     ForecastAPI.loadToDefaults(forecast)
                 }
                 
@@ -96,7 +96,8 @@ class LoadingViewController: UIViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let mvc = segue.destinationViewController as MainViewController
-        mvc.loadData(forecasts, photos: photos, firstImage: firstImage)
+//        mvc.loadData(forecasts, photos: photos, firstImage: firstImage)
+        mvc.loadData(forecasts)
     }
     
     override func prefersStatusBarHidden() -> Bool {

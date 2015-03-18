@@ -39,15 +39,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         self.pageControl.numberOfPages = self.forecasts.count
         
-        /*Places.autocomplete("new york", completion: { (data, error) -> Void in
-            let json = JSON(data: data)
-            for prediction in json["predictions"].array! {
-                println(prediction["description"])
-            }
-        })*/
-        
-        self.imageView.image = firstImage
-        let timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "newPhoto", userInfo: nil, repeats: true)
+//        self.imageView.image = firstImage
+//        let timer = NSTimer.scheduledTimerWithTimeInterval(30, target: self, selector: "newPhoto", userInfo: nil, repeats: true)
         
         let slgr = UISwipeGestureRecognizer(target: self, action: "swipeLeft")
         slgr.direction = .Left
@@ -81,8 +74,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func loadData(forecasts: [ForecastAPI], photos: [Photo], firstImage: UIImage) {
         self.forecasts = forecasts
-        self.photos = photos
-        self.firstImage = firstImage
+//        self.photos = photos
+//        self.firstImage = firstImage
+    }
+    
+    func loadData(forecasts: [ForecastAPI]) {
+        self.forecasts = forecasts
     }
     
     func newPhoto() {
