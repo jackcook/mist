@@ -242,7 +242,6 @@
 			children = (
 				EBB3CD681AB8F50400CD74EA /* Interface Controllers */,
 				EBB3CD651AB8ED4C00CD74EA /* Mist WatchKit Extension.entitlements */,
-				EBB3CD461AB8C0F900CD74EA /* InterfaceController.swift */,
 				EBB3CD481AB8C0F900CD74EA /* GlanceController.swift */,
 				EBB3CD4A1AB8C0F900CD74EA /* Images.xcassets */,
 				EBB3CD441AB8C0F900CD74EA /* Supporting Files */,
@@ -283,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB3CD661AB8F46E00CD74EA /* MainInterfaceController.swift */,
+				EBB3CD461AB8C0F900CD74EA /* InterfaceController.swift */,
 			);
 			name = "Interface Controllers";
 			sourceTree = "<group>";

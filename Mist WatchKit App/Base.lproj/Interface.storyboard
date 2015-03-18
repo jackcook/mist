@@ -61,10 +61,13 @@
                         <table alignment="left" id="YTN-eh-enP">
                             <items>
                                 <tableRow identifier="HeaderRow" id="EUG-Yj-QCB" customClass="HeaderRow" customModule="Mist_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="OXj-oX-mE7">
+                                    <group key="rootItem" width="1" height="19.5" alignment="left" id="OXj-oX-mE7">
                                         <items>
-                                            <label alignment="center" verticalAlignment="center" text="Label" id="Ysw-JP-fin"/>
+                                            <label alignment="left" verticalAlignment="center" text="Label" textAlignment="center" id="Ysw-JP-fin">
+                                                <fontDescription key="font" type="system" pointSize="14"/>
+                                            </label>
                                         </items>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </group>
                                     <connections>
                                         <outlet property="headerLabel" destination="Ysw-JP-fin" id="ntX-Gv-bND"/>
@@ -102,7 +105,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-52" y="203"/>
+            <point key="canvasLocation" x="-52" y="193.75"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">

@@ -14,6 +14,8 @@ class MainInterfaceController: WKInterfaceController {
     
     override func willActivate() {
         let locations = ["New York, NY", "San Francisco, CA", "Toronto, CA", "Chicago, IL", "Dallas, TX"]
+        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
+        let weatherData = defaults?.objectForKey("WeatherData")
         
         tableView.setNumberOfRows(locations.count, withRowType: "LocationRow")
         

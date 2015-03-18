@@ -24,6 +24,8 @@ class LoadingViewController: UIViewController {
     var photos: [Photo]!
     var firstImage: UIImage!
     
+    var weatherData = [AnyObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +43,37 @@ class LoadingViewController: UIViewController {
         ForecastAPI.getCurrentConditions("New York, NY", completion: { (forecast, error) -> Void in
             self.forecast = forecast
             self.finishedRequests += 1
+            
+            var weatherObject = [String: AnyObject]()
+            weatherObject["name"] = "New York, NY"
+            
+            var hourlyObject = [String: AnyObject]()
+            var dailyObject = [String: AnyObject]()
+            
+            for hourly in forecast.hourly.forecast {
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "hh"
+                hourlyObject["hour"] = formatter.stringFromDate(hourly.time)
+                hourlyObject["icon"] = hourly.icon
+                hourlyObject["temperature"] = hourly.temperature
+                hourlyObject["description"] = hourly.summary
+            }
+            
+            for daily in forecast.daily.forecast {
+                let formatter = NSDateFormatter()
+                formatter.dateFormat = "EEE"
+                dailyObject["day"] = formatter.stringFromDate(daily.time)
+                dailyObject["icon"] = daily.icon
+                dailyObject["high"] = daily.temperatureMax
+                dailyObject["low"] = daily.temperatureMin
+                dailyObject["description"] = daily.summary
+            }
+            
+            weatherObject["hourly"] = hourlyObject
+            weatherObject["daily"] = dailyObject
+            
+            self.weatherData.append(weatherObject)
+            
             self.finish()
         })
     }
@@ -61,6 +94,10 @@ class LoadingViewController: UIViewController {
     
     func finish() {
         if (finishedRequests == 3) && animationFinished {
+            let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
+            defaults?.setObject(weatherData, forKey: "WeatherData")
+            println(weatherData)
+            
             self.performSegueWithIdentifier("mainSegue", sender: self)
             imageTimer.invalidate()
         }
