@@ -40,6 +40,9 @@ class LoadingViewController: UIViewController {
     }
     
     func loadForecasts() {
+        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
+        let weatherData = defaults?.arrayForKey("WeatherData")
+        
         for location in locations {
             totalRequests += 1
             
@@ -47,7 +50,10 @@ class LoadingViewController: UIViewController {
                 self.forecasts.append(forecast)
                 self.finishedRequests += 1
                 
-                ForecastAPI.loadToDefaults(forecast)
+                if weatherData?.count == 0 {
+                    ForecastAPI.loadToDefaults(forecast)
+                }
+                
                 self.finish()
             })
         }
