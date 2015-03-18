@@ -50,9 +50,9 @@ class LoadingViewController: UIViewController {
                 self.forecasts.append(forecast)
                 self.finishedRequests += 1
                 
-//                if weatherData == nil {
+                if weatherData == nil {
                     ForecastAPI.loadToDefaults(forecast)
-//                }
+                }
                 
                 self.finish()
             })

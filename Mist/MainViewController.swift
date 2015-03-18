@@ -33,6 +33,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let defaults = NSUserDefaults(suiteName: "group.nyc.jackcook.Mist")
+        defaults?.setBool(true, forKey: "DoneLoading")
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.backgroundColor = pageControlBackground.backgroundColor

@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
-        <!--Main Interface Controller-->
+        <!--Mist-->
         <scene sceneID="eYg-vm-dYW">
             <objects>
-                <controller id="Qb4-UJ-55R" customClass="MainInterfaceController" customModule="Mist_WatchKit_Extension">
+                <controller title="Mist" id="Qb4-UJ-55R" customClass="MainInterfaceController" customModule="Mist_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="9Gc-fq-oPZ">
                             <items>
