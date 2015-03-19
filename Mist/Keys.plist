@@ -2,7 +2,11 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>OpenWeather</key>
+	<key>Forecast</key>
+	<string></string>
+	<key>GooglePlaces</key>
+	<string></string>
+	<key>Flickr</key>
 	<string></string>
 </dict>
 </plist>
