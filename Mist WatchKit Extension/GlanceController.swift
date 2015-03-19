@@ -47,7 +47,7 @@ class GlanceController: WKInterfaceController {
         self.descriptionLabel.setHidden(false)
         
         let data = self.weatherData[0]
-        self.weatherImage.setImageNamed("Snow")
+        self.weatherImage.setImageNamed("clear-day")
         
         let temperature = data["temperature"] as Float
         self.temperatureLabel.setText("\(Int(temperature))º")

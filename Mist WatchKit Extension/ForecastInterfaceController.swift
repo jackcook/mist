@@ -67,8 +67,7 @@ class ForecastInterfaceController: WKInterfaceController {
                 if forecastTypes[i] == "Hourly" {
                     let hourData = hourlyData[i - 1] as [String: AnyObject]
                     
-//                    let hour = hourData["hour"]! as String
-                    let hour = "5PM"
+                    let hour = hourData["hour"]! as String
                     forecastRow.timeLabel.setText(hour)
                     
                     let temp = hourData["temperature"]! as Float
